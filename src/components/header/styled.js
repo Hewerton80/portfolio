@@ -9,38 +9,17 @@ const pisca = keyframes`
     }
 `
 const move1 = keyframes`
-    from{
+    0%{
         left: -30%;
     }
-    to{
+    90%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
         left: 75%;
     }
 `
-const move2 = keyframes`
-    from{
-        left: 10%;
-    }
-    to{
-        left: -30%;
-    }
-`
-const move3 = keyframes`
-    from{
-        left: 132%;
-    }
-    to{
-        left: -30%;
-    }
-`
-const move4 = keyframes`
-    from{
-        left: 176%;
-    }
-    to{
-        left: -30%;
-    }
-`
-
 export default  styled.header`
     @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
     background-color:#649FD8;
@@ -48,6 +27,28 @@ export default  styled.header`
     display:flex;
     justify-content:center;
     overflow:hidden;
+    h1{
+        
+        font-family:'Press Start 2P';
+        position:absolute;
+        z-index:1;
+        top:65%;
+        background: -webkit-linear-gradient(#FF9F26 50%, #FFCF92 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation-name:${pisca};
+        animation-duration:.7s;
+        animation-iteration-count:infinite;
+        @media (min-width: 1px) {
+            font-size:18px;
+        } 
+        @media (min-width: 576px) {
+            font-size:28px;
+        }      
+        @media (min-width: 768px) {
+            font-size:36px;
+        }
+    }
 
     img.cloud{
         position:absolute;
@@ -103,15 +104,6 @@ export default  styled.header`
         animation-duration:25s;
         animation-delay:0s;
         animation-timing-function:linear;
-        animation-iteration-count:infinite;
-    }
-    img#begin{
-        position:absolute;
-        z-index:1;
-        top:65%;
-        width:37vw;
-        animation-name:${pisca};
-        animation-duration:.7s;
         animation-iteration-count:infinite;
     }
     footer{
