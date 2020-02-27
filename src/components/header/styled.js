@@ -24,11 +24,14 @@ export default  styled.header`
     @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
     background-color:#649FD8;
     height:100vh;
-    display:flex;
-    justify-content:center;
-    overflow:hidden;
+
+    a{
+        height:100%;
+        display:flex;
+        justify-content:center;
+        overflow:hidden;
+    }
     h1{
-        
         font-family:'Press Start 2P';
         position:absolute;
         z-index:1;
@@ -52,8 +55,7 @@ export default  styled.header`
 
     img.cloud{
         position:absolute;
-        z-index: 1;
-        display: block!important;
+        z-index: 2;
     }
     img#sol{
         position:absolute;
@@ -102,6 +104,17 @@ export default  styled.header`
         /* height:11vw; */
         animation-name:${move1};
         animation-duration:25s;
+        animation-delay:0s;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+    }
+    img#cat{
+        left: -30%;
+        top:calc(60% - 72px);
+        width:4vw;
+        /* height:11vw; */
+        animation-name:${move1};
+        animation-duration:15s;
         animation-delay:0s;
         animation-timing-function:linear;
         animation-iteration-count:infinite;
