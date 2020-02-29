@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react';
 import whiter from "./utils/whiter"
+import vars from "./utils/vars"
 import Header from "./components/header/styled"
 import AboutMe from "./components/aboutMe/styled"
 import {Row,Col} from "./components/Grid/styled"
@@ -21,23 +22,30 @@ function App() {
   // useEffect(()=>{
 
   // },[])
+  const [showGame,setShowGame] = useState(false)
   const [showAboutMe,setShowAboutMe] = useState(false)
-  function hanleShowAboutMe(){
-    setShowAboutMe(true)
+  const [showContacts,setShowContacts] = useState(false)
+
+  async function handleAboutMe(){
     if(!showAboutMe){
-      whiter("#title h1",500)
-      whiter("#about-me p span#text",30)
-      whiter("span#nome",500)
-      whiter("#email",500)
-      whiter("#tel",500)
-      whiter("#end",500)
+      await setShowAboutMe(true)
+      whiter("#title h1",500,"Sobre mim")
+      whiter("#display p span#text",30,vars.aboutMe)
+      whiter("span#nome",100,vars.name)
+      whiter("span#email",100,vars.email)
+      whiter("span#tel",100,vars.tel)
+      whiter("span#end",100,vars.end)
     }
-    //document.querySelector("#redirectAboutMe").click()
-    
+  }
+  async function handleContacts(){
+    if(!showContacts){
+      await setShowContacts(true)
+
+    }
   }
   return (
     <>
-    <Header onClick={hanleShowAboutMe}>
+    <Header onClick={handleAboutMe}>
       <a id="redirectAboutMe" href="#container-aboutMe">
       <img className="cloud" id="cloud1" src={cloud1} alt="cloud1"/>
       <img className="cloud" id="cloud2" src={cloud2} alt="cloud2"/>  
@@ -46,12 +54,13 @@ function App() {
       <img className="cloud" id="cat" src={cat} alt="."/>
       <img id="sol" src={sol} alt="sol"/>
       <h1>Click to begin</h1>
-      {/* <img id="begin" src={begin} alt="click to begin"/> */}
       </a>
       <footer/>
     </Header>
     <AboutMe show={showAboutMe}>
-      <div id="container-aboutMe">
+      {/* <img id="planets" src={planets} alt="planets"/> */}
+      <div id="stars">
+        <div id="container-aboutMe">
         <div id="title">
           <h1>Sobre mim</h1><span className="pointer">&nbsp;</span>
         </div>
@@ -63,12 +72,42 @@ function App() {
                   <img src={me} alt="hewerton"/>
                 </div>
               
-                <div id="contato">
+                <div id="menu">
+                  {/* <ul>
+                    <div>
+                      <li>
+                        <button onClick={handleAboutMe}>
+                          <span> Sobre mim</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div >
+                      <li>
+                        <button >
+                          <span> Habibildades</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div >
+                      <li>
+                        <button >
+                          <span> Experiências</span>
+                        </button>
+                      </li>
+                    </div>
+                    <div >
+                      <li>
+                        <button onClick={handleContacts}>
+                          <span> Contatos</span>
+                        </button>
+                      </li>
+                    </div>
+                  </ul> */}
                   <ul>
-                    <div><li>Nome: <span id="nome">Hewerton Adão da Paz</span> </li><span className="pointer">&nbsp;</span></div>
-                    <div><li>Email: <span id="email">hewerton80@gmail.com</span></li><span className="pointer">&nbsp;</span></div>
-                    <div><li>Telefone: <span id="tel">(84) 98809-1975</span></li><span className="pointer">&nbsp;</span></div>
-                    <div><li>Endereço: <span id="end">Natal, RN</span></li><span className="pointer">&nbsp;</span></div>
+                    <div><li>Nome: <span id="nome">{vars.name}</span> </li><span className="pointer" >&nbsp;</span></div>
+                    <div><li>Email: <span id="email">{vars.email}</span></li><span className="pointer" >&nbsp;</span></div>
+                    <div><li>Telefone: <span id="tel">{vars.tel}</span></li><span className="pointer" >&nbsp;</span></div>
+                    <div><li>Endereço: <span id="end">{vars.end}</span></li><span className="pointer" >&nbsp;</span></div>
                     <li >
                       <a href="https://github.com/Hewerton80" target="_blank" rel="noopener noreferrer" title="https://github.com/Hewerton80">
                         <img src={github_log} alt="https://github.com/Hewerton80"/>
@@ -82,21 +121,36 @@ function App() {
               </div>
             </Col>
             <Col xs={12} lg={6}>
-              <div id="about-me">
-                <p>
-                <span id="text">Graduando do bacharelado em ciência e Tecnologia com ênfase em Engenharia em Computação na UFRN.
-                
-                Sou uma pessoa que sempre estar em busca de conhecimento e de se inovar, gosto de sempre de se manter atualizado sobre tudo.
-                
-                Não importa os desafios, sempre irei enfrenta-los, nem quais são as ferramentas, irei estuda-las. Sou pontual, proativo, assíduo e sempre me esforço para deixar o meu melhor, não sou daqueles que não se importam com o que os outros pensam, gosto sempre de estar passando uma boa impressão.
-                </span>
-                <span className="pointer">&nbsp;</span>
-                </p> 
+              <div id="display">
+                {showAboutMe?
+                  <p>
+                  <span id="text">{vars.aboutMe}</span>
+                  <span className="pointer">&nbsp;</span>
+                  </p> 
+                :showContacts?
+                  <ul>
+                    <div><li>Nome: <span id="nome">{vars.name}</span> </li><span className="pointer" >&nbsp;</span></div>
+                    <div><li>Email: <span id="email">{vars.email}</span></li><span className="pointer" >&nbsp;</span></div>
+                    <div><li>Telefone: <span id="tel">{vars.tel}</span></li><span className="pointer" >&nbsp;</span></div>
+                    <div><li>Endereço: <span id="end">{vars.end}</span></li><span className="pointer" >&nbsp;</span></div>
+                    <li >
+                      <a href="https://github.com/Hewerton80" target="_blank" rel="noopener noreferrer" title="https://github.com/Hewerton80">
+                        <img src={github_log} alt="https://github.com/Hewerton80"/>
+                      </a>
+                      <a href="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127" target="_blank" rel="noopener noreferrer" title="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127">
+                        <img src={linkedin_logo} alt="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127"/>
+                      </a>
+                    </li>
+                  </ul>
+                :
+                  null
+                }
               </div>
             </Col>
           </Row>
 
         </div>
+      </div>
       </div>
     </AboutMe>
     <GlobalStyle/>

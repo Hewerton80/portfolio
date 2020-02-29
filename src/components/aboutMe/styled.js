@@ -1,5 +1,29 @@
 import styled,{keyframes} from 'styled-components';
+import planets from "../../assets/images/planets.png"
+import stars from "../../assets/images/stars.png"
 
+import colors from "../../assets/colors"
+
+const move1 = keyframes`
+    0%{
+        left: -30%;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        left: 75%;
+    }
+`
+const move2 = keyframes`
+    0%{
+        background-position-x:-100%;
+    }
+    100%{
+        background-position-x:300%;
+    }
+`;
 const pisca1 = keyframes`
     0%{
         opacity:0;
@@ -19,31 +43,49 @@ const pisca2 = keyframes`
        
     }
 `
+const upDown = keyframes`
+    0%,100%{
+        transform:scale(0.95);
+    }
+    25%,75%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+`
 
 export default styled.section`
     @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-    background: linear-gradient( #40014D 0%,#570668 100%);
+    background: linear-gradient( ${colors.primary4} 0%,${colors.primary2} 100%);
     display:${props=>props.show?"block":"none"};
-
+    #stars{
+        background-image:url(${stars});
+        animation-name:${move2};
+        animation-duration:440s;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+    }
     #container-aboutMe{
-        
         min-height:100vh;
         padding:32px;
-        span.pointer{
-            width:15px;
-            background:#fff;
-            margin-left:5px;
-            animation-name:${pisca2};
-            animation-duration:.7s;
-            animation-iteration-count:infinite;
-        }
+        z-index:3;
+        background-image:url(${planets});
+        
+        background-repeat:no-repeat;
+        background-position-y:20%;
+        animation-name:${move2};
+        animation-duration:80s;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
         #title{
+            z-index:3;
             display:flex;
             justify-content:center;
             margin-bottom:32px;
             h1{
                 font-family:'Press Start 2P';
-                background: -webkit-linear-gradient(#756700 50%, #F8E667 50%);
+                background: -webkit-linear-gradient(${colors.secunday3} 50%, ${colors.secunday1} 50%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 /* animation-name:${pisca1};
@@ -60,9 +102,10 @@ export default styled.section`
                 }
             }
         }
+
         #container-info{
             display:flex;
-            
+            z-index:3;
             
             #info{
                 width:100%;
@@ -83,20 +126,25 @@ export default styled.section`
                         animation-timing-function:linear;
                     }
                 }
-                #contato{
+                #menu{
                     ul{
                         div{
                             display:flex;
                             flex-direction:row;
                             align-items:center;
+                            
+
                             &+div{
                                     margin-top:16px;
+                            }
+                            span.pointer{
+                                background-color:#fff;
                             }
                             li{
                                 
                                 font-family:'Press Start 2P';
                                 font-size:16px;
-                                background: -webkit-linear-gradient(#9E8B06 50%, #F8E667 50%);
+                                background: -webkit-linear-gradient(${colors.secunday3} 50%, ${colors.secunday1} 50%);
                                 -webkit-background-clip: text;
                                 -webkit-text-fill-color: transparent;
                                 @media (min-width: 1px) {
@@ -121,20 +169,24 @@ export default styled.section`
                     }
                 }
             }
-            #about-me{
+            #display{
+                
                 width:100%;
-                border:5px solid #9346A4;
+                border:0;
+                border-radius:5px;
                 padding:16px;
                 display:flex;
-                flex:1;
-                flex-direction:row;
                 margin-bottom:32px;
+                background-color:${colors.primary5+"6B"};
                 p{
                     font-family:'Press Start 2P';
                     font-size:14px;
                     line-height:1.6;
-                    color: #9346A4;
+                    color:${colors.primary4};
                     text-indent:30px;
+                    span.pointer{
+                        background-color:${colors.primary5};
+                    }
                     @media (min-width: 1px) {
                         font-size:10px;
                     } 
@@ -144,15 +196,17 @@ export default styled.section`
                     @media (min-width: 768px) {
                         font-size:14px;
                     }
-                    /* &::after{
-                        content:"|";
-                        margin-left:5px;
-                        animation-name:${pisca2};
-                        animation-duration:.7s;
-                        animation-iteration-count:infinite;
-                    } */
                 }
             }
+        }
+        span.pointer{
+            width:15px;
+            background-color: #fff;
+            margin-left:5px;
+            animation-name:${pisca2};
+            animation-duration:.7s;
+            animation-iteration-count:infinite;
+            z-index:3;
         }
     }
     

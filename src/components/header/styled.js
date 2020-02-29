@@ -36,7 +36,7 @@ export default  styled.header`
         position:absolute;
         z-index:1;
         top:65%;
-        background: -webkit-linear-gradient(#FF9F26 50%, #FFCF92 50%);
+        background: -webkit-linear-gradient(#FFCF92 50%,  #FF9F26  50%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation-name:${pisca};
