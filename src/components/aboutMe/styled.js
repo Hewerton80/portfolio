@@ -1,22 +1,9 @@
 import styled,{keyframes} from 'styled-components';
 import planets from "../../assets/images/planets.png"
 import stars from "../../assets/images/stars.png"
-
 import colors from "../../assets/colors"
 
-const move1 = keyframes`
-    0%{
-        left: -30%;
-    }
-    90%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        left: 75%;
-    }
-`
-const move2 = keyframes`
+const move = keyframes`
     0%{
         background-position-x:-100%;
     }
@@ -56,12 +43,11 @@ const upDown = keyframes`
 `
 
 export default styled.section`
-    @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
     background: linear-gradient( ${colors.primary4} 0%,${colors.primary2} 100%);
     display:${props=>props.show?"block":"none"};
     #stars{
         background-image:url(${stars});
-        animation-name:${move2};
+        animation-name:${move};
         animation-duration:440s;
         animation-timing-function:linear;
         animation-iteration-count:infinite;
@@ -74,12 +60,11 @@ export default styled.section`
         
         background-repeat:no-repeat;
         background-position-y:20%;
-        animation-name:${move2};
+        animation-name:${move};
         animation-duration:80s;
         animation-timing-function:linear;
         animation-iteration-count:infinite;
         #title{
-            z-index:3;
             display:flex;
             justify-content:center;
             margin-bottom:32px;
@@ -105,7 +90,7 @@ export default styled.section`
 
         #container-info{
             display:flex;
-            z-index:3;
+            flex-direction:column;
             
             #info{
                 width:100%;
@@ -160,6 +145,7 @@ export default styled.section`
                             }
                         }
                         img{
+                            width:62px;
                             margin: 16px 24px 0 0;
                             transition-duration:.3s;
                             &:hover{
@@ -198,6 +184,25 @@ export default styled.section`
                     }
                 }
             }
+            #next-level{
+                width:100%;
+                display:flex;
+                justify-content:flex-end;
+                button{
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    padding:8px;
+                    font-family:'Press Start 2P';
+                    font-size:18px;
+                    background: linear-gradient(#f0f80a 50%, #c8a104 50%);
+                    border: 0;
+                    animation-name:${upDown};
+                    animation-duration:1s;
+                    animation-timing-function:linear;
+                    animation-iteration-count:infinite;
+                }
+            }
         }
         span.pointer{
             width:15px;
@@ -206,7 +211,6 @@ export default styled.section`
             animation-name:${pisca2};
             animation-duration:.7s;
             animation-iteration-count:infinite;
-            z-index:3;
         }
     }
     

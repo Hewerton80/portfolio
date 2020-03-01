@@ -1,5 +1,6 @@
 import styled,{keyframes} from "styled-components"
 import grama from "../../assets/images/grama.svg"
+
 const pisca = keyframes`
     0%,100%{
         opacity:1;
@@ -21,7 +22,6 @@ const move1 = keyframes`
     }
 `
 export default  styled.header`
-    @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
     background-color:#649FD8;
     height:100vh;
 
