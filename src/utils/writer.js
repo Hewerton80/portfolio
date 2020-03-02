@@ -4,11 +4,14 @@ export default (query,interval,content) =>{
     console.log("elemento: ",element)
     const textArray = String(content).split("");
     console.log("textArray: ",textArray)
-    element.innerHTML = "" 
-    textArray.forEach((c,i)=>{
-        setTimeout(()=>{
-            element.innerHTML+=c;
-        },i*Number(interval))
-    })
+    if(element){
+        element.innerHTML = "" 
+        textArray.forEach((c,i)=>{
+            setTimeout(()=>{
+                element.innerHTML+=c;
+            },i*Number(interval))
+        })
+    }
+
     
 }

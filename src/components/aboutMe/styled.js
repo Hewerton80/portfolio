@@ -54,8 +54,7 @@ export default styled.section`
     }
     #container-aboutMe{
         min-height:100vh;
-        padding:32px;
-        z-index:3;
+        padding:32px 20px;
         background-image:url(${planets});
         
         background-repeat:no-repeat;
@@ -73,9 +72,6 @@ export default styled.section`
                 background: -webkit-linear-gradient(${colors.secunday3} 50%, ${colors.secunday1} 50%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                /* animation-name:${pisca1};
-                animation-duration:.7s;
-                animation-iteration-count:infinite; */
                 @media (min-width: 1px) {
                     font-size:18px;
                 } 
@@ -91,8 +87,23 @@ export default styled.section`
         #container-info{
             display:flex;
             flex-direction:column;
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            @media (min-width: 576px) {
+                max-width: 540px;
+            }
+            @media (min-width: 768px){
+                max-width: 720px;
+            }
+            @media (min-width: 992px){
+                max-width: 960px;
+            }
+            @media (min-width: 1200px){
+                max-width: 1140px;
+            }
             
-            #info{
+            /* #info{
                 width:100%;
                 display:flex;
                 flex-direction:column;
@@ -154,33 +165,58 @@ export default styled.section`
                         }
                     }
                 }
+            } */
+            #avatar{
+                display:flex;
+                width:100%;
+                align-items:center;
+                justify-content:center;
+                margin-bottom:32px;
+                span{
+                    width:196px;
+                    height:196px;
+                    border:5px solid #F8E667;
+                    overflow:hidden;
+                    background:#fff;
+                    img{
+                        width:100%;
+                        animation-name:${pisca1};
+                        animation-duration:5s;
+                        animation-timing-function:linear;
+                    }
+                }
             }
             #display{
                 
                 width:100%;
+                min-height:506px;
                 border:0;
                 border-radius:5px;
                 padding:16px;
                 display:flex;
                 margin-bottom:32px;
-                background-color:${colors.primary5+"6B"};
+                background-color:${colors.primary5+"6B"};   
+                @media (min-width: 768px) {
+                    min-height:252px;
+                }
                 p{
                     font-family:'Press Start 2P';
-                    font-size:14px;
+                    font-size:20px;
+                    /* line-height:30px; */
                     line-height:1.6;
-                    color:${colors.primary4};
+                    color:#cccfec;
                     text-indent:30px;
                     span.pointer{
                         background-color:${colors.primary5};
                     }
                     @media (min-width: 1px) {
-                        font-size:10px;
+                        font-size:14px;
                     } 
                     @media (min-width: 576px) {
-                        font-size:12px;
+                        font-size:16px;
                     }      
                     @media (min-width: 768px) {
-                        font-size:14px;
+                        font-size:18px;
                     }
                 }
             }
@@ -188,19 +224,23 @@ export default styled.section`
                 width:100%;
                 display:flex;
                 justify-content:flex-end;
-                button{
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    padding:8px;
-                    font-family:'Press Start 2P';
-                    font-size:18px;
-                    background: linear-gradient(#f0f80a 50%, #c8a104 50%);
-                    border: 0;
-                    animation-name:${upDown};
-                    animation-duration:1s;
-                    animation-timing-function:linear;
-                    animation-iteration-count:infinite;
+                a{
+                    button{
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        padding:8px;
+                        font-family:'Press Start 2P';
+                        font-size:18px;
+                        background: linear-gradient(#f0f80a 50%, #c8a104 50%);
+                        border: 0;
+                        border-radius:4px;
+
+                        animation-name:${upDown};
+                        animation-duration:1s;
+                        animation-timing-function:linear;
+                        animation-iteration-count:infinite;
+                    }
                 }
             }
         }

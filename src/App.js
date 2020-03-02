@@ -32,7 +32,7 @@ function App() {
     if(!showAboutMe){
       await setShowAboutMe(true);
       writer("#title h1",500,"Sobre mim");
-      writer("#display p span#text",30,vars.aboutMe);
+      writer("#display p span#text",10,vars.aboutMe);
       writer("span#nome",100,vars.name);
       writer("span#email",100,vars.email);
       writer("span#tel",100,vars.tel);
@@ -90,7 +90,16 @@ function App() {
           </div>
           <div id="container-info">
             <Row>
-              <Col xs={12} lg={6}>
+              <Col xs={12} >
+                <div id="avatar">
+                  <span >
+                    <img src={me} alt="hewerton"/>
+                  </span>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              {/* <Col xs={12} lg={6}>
                 <div id="info">
                   <div id="avatar">
                     <img src={me} alt="hewerton"/>
@@ -113,8 +122,9 @@ function App() {
                     </ul>
                   </div>
                 </div>
-              </Col>
-              <Col xs={12} lg={6}>
+              </Col> */}
+
+              <Col xs={12} >
                 <div id="display">
                   <p>
                     <span id="text">{vars.aboutMe}</span>
@@ -142,7 +152,7 @@ function App() {
       <div id="moon">
         <div id="container-experience">
           <div id="title-experience">
-            <h1>Experiência</h1><span className="pointer">&nbsp;</span>
+            <h1>Experiências</h1><span className="pointer">&nbsp;</span>
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ export default styled.section`
             margin-bottom:32px;
             h1{
                 font-family:'Press Start 2P';
-                background: -webkit-linear-gradient(#348F9C 50%, #87CDD6 50%);
+                background: -webkit-linear-gradient(#050938 50%, #303887 50%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
 
@@ -59,9 +59,9 @@ export default styled.section`
             }
         }
 
-
         background-image:url(${clouds});
         background-repeat:no-repeat;
+        background-size:73vw;
         background-position-y:20%;
         animation-name:${move};
         animation-duration:120s;
@@ -72,7 +72,7 @@ export default styled.section`
     #moon{
         background-image:url(${moon});
         background-repeat:no-repeat;
-        background-position:calc(17% - 72px) 10%;
+        background-position: 10% calc(17% - 72px);
         background-size:18vw;
     }
     footer{
