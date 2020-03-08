@@ -27,7 +27,18 @@ export default styled.section`
 
     #container-experience{
         min-height:calc(100vh - 136px);
+       
         padding:32px;
+
+        background-image:url(${clouds});
+        background-repeat:no-repeat;
+        background-size:73vw;
+        background-position-y:20%;
+        animation-name:${move};
+        animation-duration:120s;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+
         #title-experience{
             z-index:3;
             display:flex;
@@ -58,21 +69,49 @@ export default styled.section`
                 animation-iteration-count:infinite;
             }
         }
+        #container-display{
+            width:100%;
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            @media (min-width: 576px) {
+                max-width: 540px;
+            }
+            @media (min-width: 768px){
+                max-width: 720px;
+            }
+            @media (min-width: 992px){
+                max-width: 960px;
+            }
+            @media (min-width: 1200px){
+                max-width: 1140px;
+            }
+            .display-xp{
+                width:100%;
+                margin:32px;
+                padding:32px;
+                background-color:rgba(253, 253, 253, 0.5);
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .imgs{
+                    width:100%;
+                    
+                    display:flex;
 
-        background-image:url(${clouds});
-        background-repeat:no-repeat;
-        background-size:73vw;
-        background-position-y:20%;
-        animation-name:${move};
-        animation-duration:120s;
-        animation-timing-function:linear;
-        animation-iteration-count:infinite;
-
+                    flex-direction:column;
+                    overflow:hidden;
+                    justify-content:center;
+                    position:relative;
+                    img{
+                        width:100%;
+                    }
+                }
+            }
+        }
     }
     #moon{
         background-image:url(${moon});
         background-repeat:no-repeat;
-        background-position: 10% calc(17% - 72px);
+        background-position: 10% calc(10% - 72px);
         background-size:18vw;
     }
     footer{

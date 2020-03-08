@@ -63,26 +63,7 @@ export default styled.section`
         animation-duration:80s;
         animation-timing-function:linear;
         animation-iteration-count:infinite;
-        #title{
-            display:flex;
-            justify-content:center;
-            margin-bottom:32px;
-            h1{
-                font-family:'Press Start 2P';
-                background: -webkit-linear-gradient(${colors.secunday3} 50%, ${colors.secunday1} 50%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                @media (min-width: 1px) {
-                    font-size:18px;
-                } 
-                @media (min-width: 576px) {
-                    font-size:28px;
-                }      
-                @media (min-width: 768px) {
-                    font-size:36px;
-                }
-            }
-        }
+
 
         #container-info{
             display:flex;
@@ -166,23 +147,50 @@ export default styled.section`
                     }
                 }
             } */
-            #avatar{
+            #profile{
                 display:flex;
+                flex-direction:column;
                 width:100%;
-                align-items:center;
-                justify-content:center;
-                margin-bottom:32px;
-                span{
-                    width:196px;
-                    height:196px;
-                    border:5px solid #F8E667;
-                    overflow:hidden;
-                    background:#fff;
-                    img{
-                        width:100%;
-                        animation-name:${pisca1};
-                        animation-duration:5s;
-                        animation-timing-function:linear;
+         
+                #avatar{
+                    display:flex;
+                    width:100%;
+                    align-items:center;
+                    justify-content:center;
+                    margin-bottom:32px;
+                    span{
+                        width:196px;
+                        height:196px;
+                        border:5px solid #F8E667;
+                        overflow:hidden;
+                        background:#fff;
+                        img{
+                            width:100%;
+                            animation-name:${pisca1};
+                            animation-duration:5s;
+                            animation-timing-function:linear;
+                        }
+                    }
+                }
+                #title{
+                    display:flex;
+                    justify-content:center;
+                    margin-bottom:32px;
+                    h1{
+                        font-family:'Press Start 2P';
+                        
+                        background: -webkit-linear-gradient(${colors.secunday3} 50%, ${colors.secunday1} 50%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        @media (min-width: 1px) {
+                            font-size:14px;
+                        } 
+                        @media (min-width: 576px) {
+                            font-size:18px;
+                        }      
+                        @media (min-width: 768px) {
+                            font-size:28px;
+                        }
                     }
                 }
             }
@@ -200,14 +208,16 @@ export default styled.section`
                     min-height:252px;
                 }
                 p{
-                    font-family:'Press Start 2P';
+                    
                     font-size:20px;
+                    
+                    font-family:'Press Start 2P';
                     /* line-height:30px; */
                     line-height:1.6;
                     color:#cccfec;
                     text-indent:30px;
                     span.pointer{
-                        background-color:${colors.primary5};
+                        background-color:#cccfec;
                     }
                     @media (min-width: 1px) {
                         font-size:14px;
@@ -217,6 +227,7 @@ export default styled.section`
                     }      
                     @media (min-width: 768px) {
                         font-size:18px;
+                        
                     }
                 }
             }
