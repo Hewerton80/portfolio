@@ -71,6 +71,8 @@ export default styled.section`
         }
         #container-display{
             width:100%;
+            margin-right: auto;
+            margin-left: auto;
             display:flex;
             justify-content:center;
             flex-direction:column;
@@ -86,15 +88,36 @@ export default styled.section`
             @media (min-width: 1200px){
                 max-width: 1140px;
             }
+
             .display-xp{
-                width:100%;
-                margin:32px;
-                padding:32px;
+                width:100%;                
                 background-color:rgba(253, 253, 253, 0.5);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                .description{
+                    width:100%;
+                    padding:32px;
+                    display:flex;
+                    flex-direction:column;
+                    h1{
+                        font-family:"Press Start 2P";
+                        font-size:20px;
+                        margin-bottom:32px;
+                        text-align:center;
+                        background: -webkit-linear-gradient(#030101 50%, #464646 50%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    p{
+                        
+                        font-family:"Press Start 2P";
+                        font-size:12px;
+                        color:#464646;
+                        line-height:20px;          
+                    }
+                }
                 .imgs{
                     width:100%;
-                    
+                    padding:32px;
                     display:flex;
 
                     flex-direction:column;

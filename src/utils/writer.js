@@ -1,9 +1,9 @@
 export default (query,interval,content) =>{
     
     const element = document.querySelector(query)
-    console.log("elemento: ",element)
+    //console.log("elemento: ",element)
     const textArray = String(content).split("");
-    console.log("textArray: ",textArray)
+    //console.log("textArray: ",textArray)
     if(element){
         element.innerHTML = "" 
         textArray.forEach((c,i)=>{

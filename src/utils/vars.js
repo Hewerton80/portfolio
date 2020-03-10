@@ -14,11 +14,20 @@ export default {
     end:"Natal, RN",
     portfolio:[
         {
+            title:"Platafoma LoP",
+            description:"Participei de uma equipe que desenvolveu uma plataforma voltada para área da educação, essa plataforma tem o intúito de hagilizar o processo de ensino e aprendizagemra na área da programação. Ideal para praticar algorítimos, a plataforma faz correções automáticas dos códigos submetidos.",
+            techs:[
+                "NodeJS",
+                "ReactJS",
+                "BootStrap"
+            ],
             imgs:[
                 screenshot_lop1,
                 screenshot_lop2,
                 screenshot_lop3
-            ]
-        }
+            ],
+            link:"https://lop.ect.ufrn.br",
+        },
+        
     ]
 }

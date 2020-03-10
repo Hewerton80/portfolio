@@ -1,15 +1,12 @@
 import React,{useState} from 'react';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
 import writer from "./utils/writer"
 import vars from "./utils/vars"
-import {MobileStepper,Stepp} from "./components/mobileStepper/styled"
 import Header from "./components/header/styled"
 import AboutMe from "./components/aboutMe/styled"
 import Experience from "./components/experience/styled"
+import DisplayExperience from "./components/diplayExperience";
 import {Row,Col} from "./components/Grid/styled"
 import GlobalStyle from "./assets/global"
-//import begin from "./assets/images/begin.svg"
 import cloud1 from "./assets/images/cloud1.png"
 import cloud2 from "./assets/images/cloud2.png"
 import cloud3 from "./assets/images/cloud3.png"
@@ -17,9 +14,6 @@ import cloud4 from "./assets/images/cloud4.png"
 import sol from "./assets/images/sol.gif"
 import cat from "./assets/images/cat.gif"
 import me from "./assets/images/hewerton.jpg"
-// import github_logo from "./assets/images/github_pixel.png"
-// import linkedin_logo from "./assets/images/linkedin_pixel.png"
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 function App() {
   //const elementsToWrite = document.querySelectorAll(".white-title-experience")
@@ -29,7 +23,6 @@ function App() {
   // },[])
   const [showAboutMe,setShowAboutMe] = useState(false)
   const [showExperience,setShowExperience] = useState(false)
-  const [index,setIndex] = useState(0)
 
   // const [showContacts,setShowContacts] = useState(false)
 
@@ -50,9 +43,7 @@ function App() {
       writer("#title-experience h1",500,"Experiência");
     }
   }
-  function handleChangeIndex(i){
-    setIndex(i)
-  }
+ 
   // async function handleContacts(){
   //   if(!showContacts){
   //     await setShowContacts(true)
@@ -167,48 +158,13 @@ function App() {
           </div>
           
           <div id="container-display">
-          {vars.portfolio.map((port,i)=>
-            <div key={i+"port"} className="display-xp">
-              <Row>
-                <Col xs={12} lg={6}>
-                  
-                </Col>
-                <Col xs={12} lg={6}>
-                  <div className="imgs">
-                    <AutoPlaySwipeableViews
-                      index={index}
-                      onChangeIndex={handleChangeIndex}
-                      enableMouseEvents
-                    >
-                      {/* <img src={screenshot_lop1} alt="lop"/>
-                      <img src={screenshot_lop2} alt="lop"/>
-                      <img src={screenshot_lop3} alt="lop"/> */}
-                      {port.imgs.map((image,i)=>
-                        <img key={i+"imgs"} src={image} alt="lop"/>
-                      )}
-                    </AutoPlaySwipeableViews>
-                    
-                    <MobileStepper>
-                      {port.imgs.map((image,i)=>
-                        <Stepp
-                          key={i+String(image)}
-                          active={index===i?true:false}
-                          onClick={()=>handleChangeIndex(i)}
-                        />
-                      )}
-
-            
-                    </MobileStepper>
-                    {/* <div className="pages">
-                      <div className="stepp"/>
-                      <div className="stepp"/>
-                    </div> */}
-                  </div>
-
-                </Col>
-              </Row>
-            </div>
-          )}
+            {vars.portfolio.map((port,i)=>
+              <DisplayExperience
+                key={i}
+                i={i}
+                port={port}
+              />
+            )}
           </div>
           
         </div>
