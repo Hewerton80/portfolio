@@ -1,6 +1,6 @@
 import {createGlobalStyle} from "styled-components"
 import fontPressStart from "./fonts/PressStart2P-Regular.ttf"
-import fontFippsRegular from "./fonts/Fipps-Regular.otf"
+import marioKart from "./fonts/Mario-Kart-DS.ttf"
 import fonyM04b from "./fonts/m04b.TTF"
 
 export default createGlobalStyle`
@@ -10,8 +10,8 @@ export default createGlobalStyle`
         font-weight: normal;
     }
     @font-face{
-        src: url(${fontFippsRegular});
-        font-family: 'Fipps-Regular';    
+        src: url(${marioKart});
+        font-family: 'Mario kart';    
         font-weight: normal;
     }
     @font-face{

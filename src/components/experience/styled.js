@@ -101,7 +101,7 @@ export default styled.section`
                     h1{
                         font-family:"Press Start 2P";
                         font-size:20px;
-                        margin-bottom:32px;
+                        
                         text-align:center;
                         background: -webkit-linear-gradient(#030101 50%, #464646 50%);
                         -webkit-background-clip: text;
@@ -110,9 +110,37 @@ export default styled.section`
                     p{
                         
                         font-family:"Press Start 2P";
+                        margin-top:24px;
                         font-size:12px;
                         color:#464646;
-                        line-height:20px;          
+                        line-height:20px;
+                    }
+                    h3{
+                        font-family:"Press Start 2P";
+                        font-size:14px;
+                        margin-top:24px;
+                        background: -webkit-linear-gradient(#030101 50%, #464646 50%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                    #techs{
+                        display:flex;
+                        flex-direction:row;
+                        flex-wrap:wrap;
+                        width:100%;
+                        margin-top:16px;
+                        span{
+                            display:flex;
+                            text-align:center;
+                            margin:8px 0px 0px 8px;
+                            padding:6px 8px;
+                            justify-content:center;
+                            font-family:"Mario Kart";
+                            color:#DCDBDA;
+                            font-size:18px;
+                            text-align:center;
+                            background: linear-gradient(#2A2A2A 50%, #4B4C4A 50%);
+                       }
                     }
                 }
                 .imgs{

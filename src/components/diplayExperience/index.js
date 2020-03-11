@@ -18,7 +18,15 @@ export default props =>{
                     <div className="description">
                         <h1>{port.title}</h1>
                         <p>{port.description}</p>
-                        {/* <h3>Tecnologias: </h3> */}
+                        <h3>Tecnologias: </h3>
+                        <div id="techs">
+                            {port.techs.map(tech=>
+                                <span>
+                                    {tech.toUpperCase()}
+                                    
+                                </span>
+                            )}
+                        </div>
 
                     </div>
                 </Col>
