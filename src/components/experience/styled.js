@@ -95,7 +95,7 @@ export default styled.section`
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 .description{
                     width:100%;
-                    padding:32px;
+                    padding:32px 32px 0 32px;
                     display:flex;
                     flex-direction:column;
                     h1{
@@ -123,7 +123,7 @@ export default styled.section`
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                     }
-                    #techs{
+                    .techs{
                         display:flex;
                         flex-direction:row;
                         flex-wrap:wrap;
@@ -132,7 +132,7 @@ export default styled.section`
                         span{
                             display:flex;
                             text-align:center;
-                            margin:8px 0px 0px 8px;
+                            margin:8px 8px 0px 0px;
                             padding:6px 8px;
                             justify-content:center;
                             font-family:"Mario Kart";
@@ -142,20 +142,62 @@ export default styled.section`
                             background: linear-gradient(#2A2A2A 50%, #4B4C4A 50%);
                        }
                     }
+
+                    @media (max-width: 576px) {
+                        h1{
+                            font-size:14px;
+                        }
+                        p{
+                            font-size:8px;
+                        }
+                        h3{
+                            font-size:10px;
+                        }
+                        .techs{
+                            span{
+                                font-size:12px;
+                            }
+                        }
+                    }
                 }
                 .imgs{
                     width:100%;
                     padding:32px;
                     display:flex;
-
+                    
                     flex-direction:column;
                     overflow:hidden;
                     justify-content:center;
                     position:relative;
                     img{
                         width:100%;
+                        cursor:pointer;
                     }
                 }
+                .visit{
+                        width:100%;
+                        display:flex;
+                        justify-content:flex-end;
+                        padding:0 32px 32px 32px;
+                        a{
+                            button{
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                padding:8px;
+                                font-family:'Press Start 2P';
+                                font-size:18px;
+                                
+                                color:#DCDBDA;
+                                background: linear-gradient(#2A2A2A 50%, #4B4C4A 50%);
+                                border: 0;
+                                border-radius:4px;
+                                @media (max-width: 576px) {
+                                    font-size:12px;
+                                }
+                            }
+                        }
+                    }
             }
         }
     }

@@ -19,7 +19,7 @@ export default props =>{
                         <h1>{port.title}</h1>
                         <p>{port.description}</p>
                         <h3>Tecnologias: </h3>
-                        <div id="techs">
+                        <div className="techs">
                             {port.techs.map(tech=>
                                 <span>
                                     {tech.toUpperCase()}
@@ -38,9 +38,7 @@ export default props =>{
                         enableMouseEvents
                     >
                         {port.imgs.map((image,j)=>
-                            <a key={j+"imgs"} href="https://lop.ect.ufrn.br" target="_blank" rel="noopener noreferrer">
-                                <img  src={image} alt="lop"/>
-                            </a>
+                            <img  key={j+"imgs"} src={image} alt="lop"/>
                         )}
                     </AutoPlaySwipeableViews>
                     
@@ -56,6 +54,17 @@ export default props =>{
                     </div>
 
                 </Col>
+            </Row>
+            <Row>
+              <Col xs={12}>
+                <div className="visit">
+                    <a href={port.link} target="_blank" rel="noopener noreferrer">
+                        <button >
+                            Visitar >
+                        </button>
+                  </a>
+                </div>
+              </Col>
             </Row>
         </div>
     )
