@@ -21,9 +21,8 @@ export default props =>{
                         <h3>Tecnologias: </h3>
                         <div className="techs">
                             {port.techs.map(tech=>
-                                <span>
-                                    {tech.toUpperCase()}
-                                    
+                                <span key={tech}>
+                                    {tech.toUpperCase()}   
                                 </span>
                             )}
                         </div>

@@ -157,7 +157,7 @@ export default styled.section`
                     width:100%;
                     align-items:center;
                     justify-content:center;
-                    margin-bottom:32px;
+                    margin:32px 0;
                     span{
                         width:196px;
                         height:196px;
@@ -220,10 +220,10 @@ export default styled.section`
                         background-color:#cccfec;
                     }
                     @media (min-width: 1px) {
-                        font-size:14px;
+                        font-size:10px;
                     } 
                     @media (min-width: 576px) {
-                        font-size:16px;
+                        font-size:14px;
                     }      
                     @media (min-width: 768px) {
                         font-size:18px;
@@ -246,7 +246,6 @@ export default styled.section`
                         background: linear-gradient(#f0f80a 50%, #c8a104 50%);
                         border: 0;
                         border-radius:4px;
-
                         animation-name:${upDown};
                         animation-duration:1s;
                         animation-timing-function:linear;

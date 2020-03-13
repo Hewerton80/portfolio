@@ -155,8 +155,7 @@ function App() {
         <div id="container-experience">
           <div id="title-experience">
             <h1>Experiências</h1><span className="pointer">&nbsp;</span>
-          </div>
-          
+          </div> 
           <div id="container-display">
             {vars.portfolio.map((port,i)=>
               <DisplayExperience

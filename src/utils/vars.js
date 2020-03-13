@@ -1,6 +1,8 @@
 import screenshot_lop1 from "../assets/images/Screenshot_lop11.png"
 import screenshot_lop2 from "../assets/images/Screenshot_lop22.png"
 import screenshot_lop3 from "../assets/images/Screenshot_lop33.png"
+import screenshot_drive1 from "../assets/images/Screenshot-drive.png"
+import screenshot_drive2 from "../assets/images/Screenshot-drive2.png"
 
 export default {
     aboutMe : `
@@ -31,7 +33,28 @@ export default {
                 screenshot_lop3
             ],
             link:"https://lop.ect.ufrn.br",
-        },
+        },{
+            title:"Google Drive",
+            description:
+                `
+                Para fins de estudo, desenvolvi um "clone" do Google drive. 
+            Onde usuário pode se cadastrar, criar pastas, navegar entre elas,
+             fazer uploads de arquivos, renomealos, mover para lixeira, etc.
+            `,
+            imgs:[
+                screenshot_drive1,
+                screenshot_drive2
+            ],
+            techs:[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "NodeJS",
+                "MongoDB",
+                "ReactJS",
+            ],
+            link:"https://jovial-lamport-bad4c9.netlify.com",
+        }
         
     ]
 }

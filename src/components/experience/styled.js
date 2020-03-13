@@ -27,23 +27,20 @@ export default styled.section`
 
     #container-experience{
         min-height:calc(100vh - 136px);
-       
-        padding:32px;
-
+        padding:32px 20px;
         background-image:url(${clouds});
         background-repeat:no-repeat;
+        background-repeat:repeat-y;
         background-size:73vw;
         background-position-y:20%;
         animation-name:${move};
         animation-duration:120s;
         animation-timing-function:linear;
         animation-iteration-count:infinite;
-
         #title-experience{
-            z-index:3;
             display:flex;
             justify-content:center;
-            margin-bottom:32px;
+            margin:32px 0 64px 0;
             h1{
                 font-family:'Press Start 2P';
                 background: -webkit-linear-gradient(#050938 50%, #303887 50%);
@@ -73,6 +70,7 @@ export default styled.section`
             width:100%;
             margin-right: auto;
             margin-left: auto;
+            
             display:flex;
             justify-content:center;
             flex-direction:column;
@@ -93,6 +91,7 @@ export default styled.section`
                 width:100%;                
                 background-color:rgba(253, 253, 253, 0.5);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-bottom:32px;
                 .description{
                     width:100%;
                     padding:32px 32px 0 32px;
@@ -101,14 +100,12 @@ export default styled.section`
                     h1{
                         font-family:"Press Start 2P";
                         font-size:20px;
-                        
                         text-align:center;
                         background: -webkit-linear-gradient(#030101 50%, #464646 50%);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                     }
                     p{
-                        
                         font-family:"Press Start 2P";
                         margin-top:24px;
                         font-size:12px;
@@ -116,7 +113,7 @@ export default styled.section`
                         line-height:20px;
                     }
                     h3{
-                        font-family:"Press Start 2P";
+                        font-family:"Press Start 2P";   
                         font-size:14px;
                         margin-top:24px;
                         background: -webkit-linear-gradient(#030101 50%, #464646 50%);
@@ -210,8 +207,7 @@ export default styled.section`
     footer{
         /* position:absolute;
         top:100%; */
-        width:100%;
-        
+        width:100%; 
         height:72px;
         background-image:url(${solo});
         background-repeat:repeat-x;
