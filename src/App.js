@@ -53,8 +53,8 @@ function App() {
     if(!showContacts){
       await setShowContacts(true);
       writer("#title-contact h1",300,"Contatos");
-      writer("#phone h3",300,"(84) 9 88091975");
-      writer("#email h1",300,"hewerton80@gmail.com");
+      writer("#phone h3",300,vars.tel);
+      writer("#email h1",300,vars.email);
     }
   }
  
@@ -213,13 +213,14 @@ function App() {
         </div>
         <div id="phone">
           <img src={whatsapp_pixel} alt="whats"/>
-          <h3>(84) 9 88091975</h3> <span className="pointer">&nbsp;</span>
+          <h3>{vars.tel}</h3> <span className="pointer">&nbsp;</span>
         </div>
         <div id="email">
           <img src={email_pixel} alt="whats"/>
-          <h1>hewerton80@gmail.com</h1> <span className="pointer">&nbsp;</span>
+          <h1>{vars.email}</h1> <span className="pointer">&nbsp;</span>
         </div>        
       </div>
+      <footer/>
     </Contact>
     <GlobalStyle/>
     </>
