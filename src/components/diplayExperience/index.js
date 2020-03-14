@@ -31,25 +31,25 @@ export default props =>{
                 </Col>
                 <Col xs={12} lg={6}>
                     <div className="imgs">
-                    <AutoPlaySwipeableViews
-                        index={index}
-                        onChangeIndex={handleChangeIndex}
-                        enableMouseEvents
-                    >
-                        {port.imgs.map((image,j)=>
-                            <img  key={j+"imgs"} src={image} alt="lop"/>
-                        )}
-                    </AutoPlaySwipeableViews>
-                    
-                    <MobileStepper>
-                        {port.imgs.map((image,j)=>
-                            <Stepp
-                                key={j+"stepp"}
-                                active={index===j?true:false}
-                                onClick={()=>handleChangeIndex(j)}
-                            />
-                        )}
-                    </MobileStepper>
+                        <AutoPlaySwipeableViews
+                            index={index}
+                            onChangeIndex={handleChangeIndex}
+                            enableMouseEvents
+                        >
+                            {port.imgs.map((image,j)=>
+                                <img  key={j+"imgs"} src={image} alt="lop"/>
+                            )}
+                        </AutoPlaySwipeableViews>
+                        
+                        <MobileStepper>
+                            {port.imgs.map((image,j)=>
+                                <Stepp
+                                    key={j+"stepp"}
+                                    active={index===j?true:false}
+                                    onClick={()=>handleChangeIndex(j)}
+                                />
+                            )}
+                        </MobileStepper>
                     </div>
 
                 </Col>

@@ -11,6 +11,17 @@ const move = keyframes`
         background-position-x:450%;
     }
 `;
+const upDown = keyframes`
+    0%,100%{
+        transform:scale(0.95);
+    }
+    25%,75%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+`
 const pisca2 = keyframes`
     0%,100%{
         opacity:1;
@@ -172,29 +183,55 @@ export default styled.section`
                     }
                 }
                 .visit{
-                        width:100%;
-                        display:flex;
-                        justify-content:flex-end;
-                        padding:0 32px 32px 32px;
-                        a{
-                            button{
-                                display:flex;
-                                align-items:center;
-                                justify-content:center;
-                                padding:8px;
-                                font-family:'Press Start 2P';
-                                font-size:18px;
-                                
-                                color:#DCDBDA;
-                                background: linear-gradient(#2A2A2A 50%, #4B4C4A 50%);
-                                border: 0;
-                                border-radius:4px;
-                                @media (max-width: 576px) {
-                                    font-size:12px;
-                                }
+                    width:100%;
+                    display:flex;
+                    justify-content:flex-end;
+                    padding:0 32px 32px 32px;
+                    a{
+                        button{
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            padding:8px;
+                            font-family:'Press Start 2P';
+                            font-size:14px;
+                            
+                            color:#DCDBDA;
+                            background: linear-gradient(#2A2A2A 50%, #4B4C4A 50%);
+                            border: 0;
+                            border-radius:4px;
+                            @media (max-width: 576px) {
+                                font-size:12px;
                             }
                         }
                     }
+                }
+    
+            }
+
+
+            #next-contacts{
+                width:100%;
+                display:flex;
+                justify-content:flex-end;
+                a{
+                    button{
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        padding:8px;
+                        font-family:'Press Start 2P';
+                        font-size:18px;
+                        color:#fff;
+                        background: linear-gradient(#050938 50%, #303887 50%);
+                        border: 0;
+                        border-radius:4px;
+                        animation-name:${upDown};
+                        animation-duration:1s;
+                        animation-timing-function:linear;
+                        animation-iteration-count:infinite;
+                    }
+                }
             }
         }
     }

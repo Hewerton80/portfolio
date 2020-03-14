@@ -197,7 +197,7 @@ export default styled.section`
             #display{
                 
                 width:100%;
-                min-height:506px;
+                min-height:400px;
                 border:0;
                 border-radius:5px;
                 padding:16px;
@@ -221,9 +221,11 @@ export default styled.section`
                     }
                     @media (min-width: 1px) {
                         font-size:10px;
+                        line-height:20px;
                     } 
                     @media (min-width: 576px) {
                         font-size:14px;
+                        line-height:1.6;
                     }      
                     @media (min-width: 768px) {
                         font-size:18px;
@@ -231,7 +233,7 @@ export default styled.section`
                     }
                 }
             }
-            #next-level{
+            #next-experience{
                 width:100%;
                 display:flex;
                 justify-content:flex-end;

@@ -2,6 +2,7 @@ import {createGlobalStyle} from "styled-components"
 import fontPressStart from "./fonts/PressStart2P-Regular.ttf"
 import marioKart from "./fonts/Mario-Kart-DS.ttf"
 import fonyM04b from "./fonts/m04b.TTF"
+import digits from "./fonts/advanced_pixel_lcd-7.ttf"
 
 export default createGlobalStyle`
     @font-face{
@@ -17,6 +18,11 @@ export default createGlobalStyle`
     @font-face{
         src: url(${fonyM04b});
         font-family: 'm04b';    
+        font-weight: normal;
+    } 
+    @font-face{
+        src: url(${digits});
+        font-family: 'digits';    
         font-weight: normal;
     }
     html{

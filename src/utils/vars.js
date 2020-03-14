@@ -3,6 +3,9 @@ import screenshot_lop2 from "../assets/images/Screenshot_lop22.png"
 import screenshot_lop3 from "../assets/images/Screenshot_lop33.png"
 import screenshot_drive1 from "../assets/images/Screenshot-drive.png"
 import screenshot_drive2 from "../assets/images/Screenshot-drive2.png"
+import screenshot_insta1 from "../assets/images/Screenshot-insta1.png"
+import screenshot_insta2 from "../assets/images/Screenshot-insta2.png"
+import screenshot_insta3 from "../assets/images/Screenshot-insta3.png"
 
 export default {
     aboutMe : `
@@ -54,6 +57,27 @@ export default {
                 "ReactJS",
             ],
             link:"https://jovial-lamport-bad4c9.netlify.com",
+        },{
+            imgs:[
+                screenshot_insta1,
+                screenshot_insta2,
+                screenshot_insta3
+            ],
+            title:"Instagram",
+            description:
+                `
+                Para fins de estudo, desenvolvi um "clone" do instagram. 
+            Onde usuário pode se cadastrar, postar fotos, colocar o local, descrição e hastags.
+            `,
+            techs:[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "NodeJS",
+                "MongoDB",
+                "ReactJS",
+            ], 
+            link:"https://distracted-pasteur-c86c90.netlify.com",
         }
         
     ]

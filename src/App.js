@@ -4,9 +4,13 @@ import vars from "./utils/vars"
 import Header from "./components/header/styled"
 import AboutMe from "./components/aboutMe/styled"
 import Experience from "./components/experience/styled"
+import Contact from "./components/contact/styled"
+
 import DisplayExperience from "./components/diplayExperience";
 import {Row,Col} from "./components/Grid/styled"
 import GlobalStyle from "./assets/global"
+import linkedin_logo from "./assets/images/linkedin_pixel.png"
+import github_logo from "./assets/images/github_pixel.png"
 import cloud1 from "./assets/images/cloud1.png"
 import cloud2 from "./assets/images/cloud2.png"
 import cloud3 from "./assets/images/cloud3.png"
@@ -14,7 +18,8 @@ import cloud4 from "./assets/images/cloud4.png"
 import sol from "./assets/images/sol.gif"
 import cat from "./assets/images/cat.gif"
 import me from "./assets/images/hewerton.jpg"
-
+import whatsapp_pixel from "./assets/images/whatsapp_pixel.png"
+import email_pixel from "./assets/images/email_pixel.png"
 function App() {
   //const elementsToWrite = document.querySelectorAll(".white-title-experience")
   
@@ -23,6 +28,7 @@ function App() {
   // },[])
   const [showAboutMe,setShowAboutMe] = useState(false)
   const [showExperience,setShowExperience] = useState(false)
+  const [showContacts,setShowContacts] = useState(false)
 
   // const [showContacts,setShowContacts] = useState(false)
 
@@ -40,7 +46,15 @@ function App() {
   async function handleShowExperience(){
     if(!showExperience){
       await setShowExperience(true);
-      writer("#title-experience h1",500,"Experiência");
+      writer("#title-experience h1",300,"Experiência");
+    }
+  }
+  async function handleShowContacts(){
+    if(!showContacts){
+      await setShowContacts(true);
+      writer("#title-contact h1",300,"Contatos");
+      writer("#phone h3",300,"(84) 9 88091975");
+      writer("#email h1",300,"hewerton80@gmail.com");
     }
   }
  
@@ -137,10 +151,10 @@ function App() {
             </Row>
             <Row>
               <Col xs={12}>
-                <div id="next-level">
+                <div id="next-experience">
                   <a href="#container-experience">
                     <button onClick={handleShowExperience}>
-                      Next Level >
+                      Experiências >
                     </button>
                   </a>
                 </div>
@@ -164,13 +178,49 @@ function App() {
                 port={port}
               />
             )}
+            <Row>
+              <Col xs={12}>
+                <div id="next-contacts">
+                  <a href="#container-contacts">
+                    <button onClick={handleShowContacts}>
+                      Contatos >
+                    </button>
+                  </a>
+                </div>
+              </Col>
+            </Row>
           </div>
-          
+
         </div>
-        
       </div>
       <footer/>
     </Experience>
+    <Contact show={showContacts}>
+      <div id="container-contacts">
+        <div id="title-contact">
+          <h1>Contatos</h1> <span className="pointer">&nbsp;</span>
+        </div>
+      
+        <div id="container-logos">
+          <div id="logos">
+            <a href="https://github.com/Hewerton80" target="_blank" rel="noopener noreferrer" title="https://github.com/Hewerton80">
+              <img src={github_logo} alt="https://github.com/Hewerton80"/>
+            </a>
+            <a href="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127" target="_blank" rel="noopener noreferrer" title="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127">
+              <img src={linkedin_logo} alt="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127"/>
+            </a>
+          </div>
+        </div>
+        <div id="phone">
+          <img src={whatsapp_pixel} alt="whats"/>
+          <h3>(84) 9 88091975</h3> <span className="pointer">&nbsp;</span>
+        </div>
+        <div id="email">
+          <img src={email_pixel} alt="whats"/>
+          <h1>hewerton80@gmail.com</h1> <span className="pointer">&nbsp;</span>
+        </div>        
+      </div>
+    </Contact>
     <GlobalStyle/>
     </>
   );
