@@ -196,7 +196,10 @@ function App() {
       <footer/>
     </Experience>
     <Contact show={showContacts}>
-      <div id="container-contacts">
+      <div id="bubbles">
+
+      
+        <div id="container-contacts">
         <div id="title-contact">
           <h1>Contatos</h1> <span className="pointer">&nbsp;</span>
         </div>
@@ -219,6 +222,7 @@ function App() {
           <img src={email_pixel} alt="whats"/>
           <h1>{vars.email}</h1> <span className="pointer">&nbsp;</span>
         </div>        
+      </div>
       </div>
       <footer/>
     </Contact>

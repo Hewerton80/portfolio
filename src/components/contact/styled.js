@@ -1,5 +1,25 @@
 import styled,{keyframes} from "styled-components"
 import sea from "../../assets/images/sea.png"
+import bubble from "../../assets/images/bubbles.png"
+import sea2 from "../../assets/images/sea2.png"
+
+
+const move = keyframes`
+    0%{
+        background-position-x:-200%;
+    }
+    100%{
+        background-position-x:450%;
+    }
+`;
+const moveIverse = keyframes`
+    0%{
+        background-position-x:200%;
+    }
+    100%{
+        background-position-x:-450%;
+    }
+`;
 const pisca2 = keyframes`
     0%,100%{
         opacity:1;
@@ -39,9 +59,23 @@ export default  styled.section`
     
     background: linear-gradient(180deg, rgba(57,104,192,1) 10%, rgba(48,95,183,1) 10%, rgba(48,95,183,1) 20%, rgba(17,64,152,1) 20%, rgba(17,64,152,1) 30%, rgba(0,40,128,1) 30%, rgba(0,40,128,1) 40%, rgba(0,32,119,1) 40%, rgba(0,32,119,1) 50%, rgba(0,24,112,1) 50%, rgba(0,24,112,1) 100%);
     display:${props=>props.show?"block":"none"};
+    
+    #bubbles{
+        background-image:url(${sea2});        
+        background-repeat:no-repeat;
+        background-position-y:20%;
+        animation-name:${moveIverse};
+        animation-duration:80s;
+        animation-timing-function:linear;
+        animation-iteration-count:infinite;
+        @media(min-width: 840px){
+            animation-name:${move};
+        }
+    }
     #container-contacts{
         padding:32px 20px;
         min-height:calc(100vh - 64px - 153px);
+        
         #title-contact{
             display:flex;
             justify-content:center;
@@ -101,7 +135,7 @@ export default  styled.section`
                 margin-right:10px;
             }
             h3{
-                font-family:digits;
+                font-family:'Press Start 2P';
                 background: -webkit-linear-gradient(#ffb400 50%, #dd9c00 50%);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -141,7 +175,7 @@ export default  styled.section`
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 @media (min-width: 1px) {
-                    font-size:14px;
+                    font-size:12px;
                 } 
                 @media (min-width: 576px) {
                     font-size:20px;
