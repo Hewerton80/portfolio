@@ -1,6 +1,11 @@
 import screenshot_lop1 from "../assets/images/Screenshot_lop11.png"
 import screenshot_lop2 from "../assets/images/Screenshot_lop22.png"
 import screenshot_lop3 from "../assets/images/Screenshot_lop33.png"
+import screenshot_poke1 from "../assets/images/poke1.png"
+import screenshot_poke2 from "../assets/images/poke2.png"
+import screenshot_poke3 from "../assets/images/poke3.png"
+import screenshot_poke4 from "../assets/images/poke4.png"
+
 import screenshot_drive1 from "../assets/images/Screenshot-drive.png"
 import screenshot_drive2 from "../assets/images/Screenshot-drive2.png"
 import screenshot_insta1 from "../assets/images/Screenshot-insta1.png"
@@ -21,7 +26,7 @@ export default {
     portfolio:[
         {
             title:"Platafoma LoP",
-            description:"Participei de uma equipe que desenvolveu uma plataforma voltada para área da educação, essa plataforma tem o intúito de hagilizar o processo de ensino e aprendizagemra na área da programação. Ideal para praticar algorítimos, a plataforma faz correções automáticas dos códigos submetidos.",
+            description:"Sou colaborador de uma plataforma voltada para área da educação, essa plataforma tem o intúito de hagilizar o processo de ensino e aprendizagemra na área da programação. Ideal para praticar algorítimos, a plataforma faz correções automáticas dos códigos submetidos.",
             techs:[
                 "HTML",
                 "CSS",
@@ -38,12 +43,31 @@ export default {
             ],
             link:"https://lop.ect.ufrn.br",
         },{
+            title:"Poke info",
+            description:"Projeto desenvolvido para consumir a api 'pokeapi.co'. Funcionalidades: Lista pokemons, habilidades, tipos e obtêm informações especificas do pokemon.",
+            techs:[
+                "HTML",
+                "CSS",
+                "NodeJS",
+                "ReactJS",
+                "Material UI",
+                "Styled components"
+            ],
+            imgs:[
+                screenshot_poke1,
+                screenshot_poke2,
+                screenshot_poke3,
+                screenshot_poke4
+            ],
+            link:"https://upbeat-jones-72d20b.netlify.app/",
+        },
+        {
             title:"Google Drive",
             description:
                 `
-                Para fins de estudo, desenvolvi um "clone" do Google drive. 
+                Para fins de estudo, desenvolvi um "clone" do Google drive 100% responivo. 
             Onde usuário pode se cadastrar, criar pastas, navegar entre elas,
-             fazer uploads de arquivos, renomealos, mover para lixeira, etc.
+             fazer uploads de arquivos, renomear, mover para lixeira, etc.
             `,
             imgs:[
                 screenshot_drive1,
