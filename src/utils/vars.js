@@ -17,7 +17,7 @@ export default {
         Graduando do bacharelado em ciência e Tecnologia com ênfase em Engenharia da Computação na UFRN.       
         Sou uma pessoa que sempre estar em busca de conhecimento e de se inovar, gosto de sempre se manter atualizado sobre tudo.
         Não importa os desafios, sempre irei enfrenta-los, nem quais são as ferramentas, irei estuda-las. 
-        Minhas principais ferramentas são : NodeJS no back-end, React, no Front-end.
+        Minhas principais ferramentas são : NodeJS no back-end, React no Front-end.
     `,
     name:"Hewerton Adão da Paz",
     email: "hewerton80@gmail.com",
@@ -42,6 +42,24 @@ export default {
                 screenshot_lop3
             ],
             link:"https://lop.ect.ufrn.br",
+        },{
+            title:"Poke info",
+            description:"Projeto desenvolvido para consumir a api 'pokeapi.co'. Funcionalidades: Lista pokemons, habilidades, tipos e obtêm informações especificas do pokemon.",
+            techs:[
+                "HTML",
+                "CSS",
+                "NodeJS",
+                "ReactJS",
+                "Material UI",
+                "Styled components"
+            ],
+            imgs:[
+                screenshot_poke1,
+                screenshot_poke2,
+                screenshot_poke3,
+                screenshot_poke4
+            ],
+            link:"https://upbeat-jones-72d20b.netlify.app/",
         },{
             title:"Poke info",
             description:"Projeto desenvolvido para consumir a api 'pokeapi.co'. Funcionalidades: Lista pokemons, habilidades, tipos e obtêm informações especificas do pokemon.",
@@ -91,7 +109,7 @@ export default {
             title:"Instagram",
             description:
                 `
-                Para fins de estudo, desenvolvi um "clone" do instagram. 
+                Para fins de estudo, desenvolvi ampliar as funcionaidades do projeto da Semana 7 da OmniStack (instagram). 
             Onde usuário pode se cadastrar, postar fotos, colocar o local, descrição e hastags.
             `,
             techs:[
