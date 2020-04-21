@@ -60,24 +60,6 @@ export default {
                 screenshot_poke4
             ],
             link:"https://upbeat-jones-72d20b.netlify.app/",
-        },{
-            title:"Poke info",
-            description:"Projeto desenvolvido para consumir a api 'pokeapi.co'. Funcionalidades: Lista pokemons, habilidades, tipos e obtêm informações especificas do pokemon.",
-            techs:[
-                "HTML",
-                "CSS",
-                "NodeJS",
-                "ReactJS",
-                "Material UI",
-                "Styled components"
-            ],
-            imgs:[
-                screenshot_poke1,
-                screenshot_poke2,
-                screenshot_poke3,
-                screenshot_poke4
-            ],
-            link:"https://upbeat-jones-72d20b.netlify.app/",
         },
         {
             title:"Google Drive",
