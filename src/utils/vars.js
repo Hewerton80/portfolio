@@ -26,7 +26,7 @@ export default {
     portfolio:[
         {
             title:"Platafoma LoP",
-            description:"Sou colaborador de uma plataforma voltada para área da educação, essa plataforma tem o intúito de hagilizar o processo de ensino e aprendizagemra na área da programação. Ideal para praticar algorítimos, a plataforma faz correções automáticas dos códigos submetidos.",
+            description:"Sou colaborador de uma plataforma voltada para área da educação, essa plataforma tem o intuito de agilizar o processo de ensino e aprendizagemra na área da programação. Ideal para praticar algorítimos, a plataforma faz correções automáticas dos códigos submetidos.",
             techs:[
                 "HTML",
                 "CSS",
