@@ -1,4 +1,4 @@
-export default {
+const colors = {
     primary1:"#4C539A",
     primary2:"#303887",
     primary3:"#0C1355",
@@ -10,3 +10,5 @@ export default {
     secunday4:"#514700",
 
 }
+
+export default colors;

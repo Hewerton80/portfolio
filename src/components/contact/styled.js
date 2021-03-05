@@ -1,6 +1,5 @@
-import styled,{keyframes} from "styled-components"
+import styled, { keyframes } from "styled-components"
 import sea from "../../assets/images/sea.png"
-import bubble from "../../assets/images/bubbles.png"
 import sea2 from "../../assets/images/sea2.png"
 
 
@@ -55,10 +54,10 @@ const animateImgs = keyframes`
     }
 `
 
-export default  styled.section`
+export default styled.section`
     
     background: linear-gradient(180deg, rgba(57,104,192,1) 10%, rgba(48,95,183,1) 10%, rgba(48,95,183,1) 20%, rgba(17,64,152,1) 20%, rgba(17,64,152,1) 30%, rgba(0,40,128,1) 30%, rgba(0,40,128,1) 40%, rgba(0,32,119,1) 40%, rgba(0,32,119,1) 50%, rgba(0,24,112,1) 50%, rgba(0,24,112,1) 100%);
-    display:${props=>props.show?"block":"none"};
+    display:${props => props.show ? "block" : "none"};
     
     #bubbles{
         background-image:url(${sea2});        

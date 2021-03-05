@@ -2,10 +2,11 @@ import React,{useState} from 'react';
 import {Row,Col} from "../Grid/styled"
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import {MobileStepper,Stepp} from "../mobileStepper/styled"
+import {MobileStepper,Stepp} from "../mobileStepper/styled";
+import { FaGreaterThan } from 'react-icons/fa'
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-export default props =>{
+const DiplayExperience = props =>{
     const {port,i} = props;
     const [index,setIndex] = useState(0);
     function handleChangeIndex(i){
@@ -59,7 +60,7 @@ export default props =>{
                 <div className="visit">
                     <a href={port.link} target="_blank" rel="noopener noreferrer">
                         <button >
-                            Visitar >
+                            Visitar <FaGreaterThan colors={'#fff'}  style={{marginLeft: 10}}/>
                         </button>
                   </a>
                 </div>
@@ -68,3 +69,5 @@ export default props =>{
         </div>
     )
 }
+
+export default DiplayExperience;
