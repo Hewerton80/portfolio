@@ -22,7 +22,7 @@ const vars =  {
     aboutMe: `
         Graduando do bacharelado em ciência e Tecnologia com ênfase em Engenharia da Computação na UFRN.       
         Sou um programador fullstack, com experiência em Javascript, typescript, NodeJs, express,
-        ReactJs, Angular, banco de dados relacionaise não relacionais, bootstrap, html, css. No momento estudo React
+        ReactJs, Angular, banco de dados relacionais e não relacionais, bootstrap, html, css. No momento estudo React
         Native e tenho interesse em escalabilidade, DevOps e práticas de testes.
     `,
     name: "Hewerton Adão da Paz",
@@ -48,7 +48,27 @@ const vars =  {
                 screenshot_lop3
             ],
             link: "https://lop.ect.ufrn.br",
-        }, {
+        },
+        {
+            title: "Gerenciador de tarefas",
+            description:
+                `
+                Agendador/Gerenciador de tarefas. Funcionalidades: Criar/Atualizar/Remover tarefas, 
+                Listar tarefas com base nas categorias (Atrasadas, Para fazer hoje, Para fazer e Feitas), 
+                Atualizar tarefas para 'Feitas' 
+            `,
+            imgs: [
+                'https://user-images.githubusercontent.com/37268237/110219011-8321e780-7e9b-11eb-9138-065fb96003e8.gif'
+            ],
+            widthImages: 200,
+            techs: [
+                "React Native",
+                "TypeScript",
+                "Styled Components",    
+            ],
+            link: "https://github.com/Hewerton80/Task-Manger/blob/master/README.md",
+        }, 
+        {
             title: "Poke info",
             description: "Projeto desenvolvido para consumir a api 'pokeapi.co'. Funcionalidades: Lista pokemons, habilidades, tipos e obtêm informações especificas do pokemon.",
             techs: [
@@ -89,7 +109,9 @@ const vars =  {
                 
             ],
             link: "https://url-shortener-hewerton80.vercel.app",
-        }, {
+        }, 
+
+        {
             title: "Google Drive",
             description:
                 `

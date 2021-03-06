@@ -23,9 +23,9 @@ import whatsapp_pixel from "./assets/images/whatsapp_pixel.png"
 import email_pixel from "./assets/images/email_pixel.png"
 
 function App() {
-  const [showAboutMe, setShowAboutMe] = useState(false)
-  const [showExperience, setShowExperience] = useState(false)
-  const [showContacts, setShowContacts] = useState(false)
+  const [showAboutMe, setShowAboutMe] = useState(false);
+  const [showExperience, setShowExperience] = useState(false);
+  const [showContacts, setShowContacts] = useState(false);
 
   // const [showContacts,setShowContacts] = useState(false)
   const handleAboutMe = useCallback(() => {
@@ -43,10 +43,10 @@ function App() {
   const handleShowExperience = useCallback(() => {
     if (!showExperience) {
       setShowExperience(true);
-      writer("#title-experience h1", 300, "Experiência");
+      writer("#title-experience h1", 300, "Experiências");
     }
   }, [showExperience]);
-  
+
   const handleShowContacts = useCallback(() => {
     if (!showContacts) {
       setShowContacts(true);
@@ -152,8 +152,8 @@ function App() {
                   <div id="next-experience">
                     <a href="#container-experience">
                       <button onClick={handleShowExperience}>
-                        Experiências <FaGreaterThan colors={'#fff'}  style={{marginLeft: 10}}/>
-                    </button>
+                        Experiências <FaGreaterThan colors={'#fff'} style={{ marginLeft: 10 }} />
+                      </button>
                     </a>
                   </div>
                 </Col>
@@ -169,20 +169,24 @@ function App() {
               <h1>Experiências</h1><span className="pointer">&nbsp;</span>
             </div>
             <div id="container-display">
-              {vars.portfolio.map((port, i) =>
-                <DisplayExperience
-                  key={i}
-                  i={i}
-                  port={port}
-                />
-              )}
+              <Row>
+                {vars.portfolio.map((port, i) =>
+                  <Col xs={12} lg={6}>
+                    <DisplayExperience
+                      key={i}
+                      i={i}
+                      port={port}
+                    />
+                  </Col>
+                )}
+              </Row>
               <Row>
                 <Col xs={12}>
                   <div id="next-contacts">
                     <a href="#container-contacts">
                       <button onClick={handleShowContacts}>
-                        Contatos <FaGreaterThan colors={'#fff'}  style={{marginLeft: 10}}/>
-                    </button>
+                        Contatos <FaGreaterThan colors={'#fff'} style={{ marginLeft: 10 }} />
+                      </button>
                     </a>
                   </div>
                 </Col>

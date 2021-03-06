@@ -99,7 +99,7 @@ export default styled.section`
             }
 
             .display-xp{
-                width:100%;                
+                width:98%;                
                 background-color:rgba(253, 253, 253, 0.5);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 margin-bottom:32px;
@@ -169,16 +169,16 @@ export default styled.section`
                     }
                 }
                 .imgs{
-                    width:100%;
                     padding:32px;
                     display:flex;
-                    
+                    /* align-items: center; */
                     flex-direction:column;
                     overflow:hidden;
                     justify-content:center;
                     position:relative;
                     img{
-                        width:100%;
+                        /* width:100%; */
+                        max-width: 490px;
                         cursor:pointer;
                     }
                 }
