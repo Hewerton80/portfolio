@@ -2,6 +2,12 @@ import screenshot_lop1 from "../assets/images/Screenshot_lop11.png"
 import screenshot_lop2 from "../assets/images/Screenshot_lop22.png"
 import screenshot_lop3 from "../assets/images/Screenshot_lop33.png"
 
+import my_animes1 from "../assets/images/my-animes1.png"
+import my_animes2 from "../assets/images/my-animes2.png"
+import my_animes3 from "../assets/images/my-animes3.png"
+import my_animes4 from "../assets/images/my-animes4.png"
+
+
 import screenshot_urlShort1 from "../assets/images/url-short1.png"
 import screenshot_urlShort2 from "../assets/images/url-short2.png"
 import screenshot_urlShort3 from "../assets/images/url-short3.png"
@@ -18,12 +24,12 @@ import screenshot_insta1 from "../assets/images/Screenshot-insta1.png"
 import screenshot_insta2 from "../assets/images/Screenshot-insta2.png"
 import screenshot_insta3 from "../assets/images/Screenshot-insta3.png"
 
-const vars =  {
+const vars = {
     aboutMe: `
-        Graduando do bacharelado em ciência e Tecnologia com ênfase em Engenharia da Computação na UFRN.       
-        Sou um programador fullstack, com experiência em Javascript, typescript, NodeJs, express,
-        ReactJs, Angular, banco de dados relacionais e não relacionais, bootstrap, html, css. No momento estudo React
-        Native e tenho interesse em escalabilidade, DevOps e práticas de testes.
+        Graduando do bacharelado em ciência e Tecnologia na UFRN.       
+        Sou um programador fullstack, com experiência em Javascript, typescript, NextJs, NodeJs, express,
+        ReactJs, banco de dados relacionais e não relacionais, bootstrap, html, css. No momento estudo React
+        Native e tenho interesse em escalabilidade, Clean code e práticas de testes.
     `,
     name: "Hewerton Adão da Paz",
     email: "hewerton80@gmail.com",
@@ -64,10 +70,50 @@ const vars =  {
             techs: [
                 "React Native",
                 "TypeScript",
-                "Styled Components",    
+                "Styled Components",
             ],
             link: "https://github.com/Hewerton80/Task-Manger/blob/master/README.md",
-        }, 
+        },
+        {
+            title: "My-animes",
+            description:
+                `
+                Site similar ao IMD animes, utilizando a kitsu api. Ótimo para acompanhar os novos lançamentos e avaliações da comunidade otaku.
+            `,
+            imgs: [
+                my_animes1,
+                my_animes2,
+                my_animes3,
+                my_animes4,
+            ],
+            techs: [
+                "TypeScript",
+                "NextJs",
+            ],
+            link: "https://my-animes-db.vercel.app/",
+        },
+        {
+            title: "Encurtador de URLs",
+            description:
+                `
+                Sistema web onde seja possível um usuário poder realizar o encurtamento de uma URL.
+            `,
+            imgs: [
+                screenshot_urlShort1,
+                screenshot_urlShort2,
+                screenshot_urlShort3
+            ],
+            techs: [
+                "HTML",
+                "CSS",
+                "TypeScript",
+                "NodeJS",
+                "MongoDB",
+                "ReactJS",
+
+            ],
+            link: "https://url-shortener-hewerton80.vercel.app",
+        },
         {
             title: "Poke info",
             description: "Projeto desenvolvido para consumir a api 'pokeapi.co'. Funcionalidades: Lista pokemons, habilidades, tipos e obtêm informações especificas do pokemon.",
@@ -89,29 +135,6 @@ const vars =  {
             link: "https://upbeat-jones-72d20b.netlify.app/",
         },
         {
-            title: "Encurtador de URLs",
-            description:
-                `
-                Sistema web onde seja possível um usuário poder realizar o encurtamento de uma URL.
-            `,
-            imgs: [
-                screenshot_urlShort1,
-                screenshot_urlShort2,
-                screenshot_urlShort3
-            ],
-            techs: [
-                "HTML",
-                "CSS",
-                "TypeScript",
-                "NodeJS",
-                "MongoDB",
-                "ReactJS",
-                
-            ],
-            link: "https://url-shortener-hewerton80.vercel.app",
-        }, 
-
-        {
             title: "Google Drive",
             description:
                 `
@@ -132,18 +155,20 @@ const vars =  {
                 "ReactJS",
             ],
             link: "https://jovial-lamport-bad4c9.netlify.com",
-        }, {
-            imgs: [
-                screenshot_insta1,
-                screenshot_insta2,
-                screenshot_insta3
-            ],
+        },
+        {
+
             title: "Instagram",
             description:
                 `
                 Para fins de estudo, desenvolvi ampliar as funcionaidades do projeto da Semana 7 da OmniStack (instagram). 
             Onde usuário pode se cadastrar, postar fotos, colocar o local, descrição e hastags.
             `,
+            imgs: [
+                screenshot_insta1,
+                screenshot_insta2,
+                screenshot_insta3
+            ],
             techs: [
                 "HTML",
                 "CSS",

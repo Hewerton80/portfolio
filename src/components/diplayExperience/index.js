@@ -44,7 +44,8 @@ const DiplayExperience = props => {
                                     key={j + "imgs"}
                                     src={image}
                                     alt={'image-' + j + 1}
-                                    width={`${port.widthImages ? port.widthImages + 'px' : '100%'} `} />
+                                    width={`${port.widthImages ? port.widthImages + 'px' : '100%'} `} 
+                                />
                             )}
                         </AutoPlaySwipeableViews>
 
