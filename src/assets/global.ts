@@ -1,27 +1,23 @@
-import {createGlobalStyle} from "styled-components"
-import fontPressStart from "./fonts/PressStart2P-Regular.ttf"
-import marioKart from "./fonts/Mario-Kart-DS.ttf"
-import fonyM04b from "./fonts/m04b.TTF"
-import digits from "./fonts/advanced_pixel_lcd-7.ttf"
+import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
     @font-face{
-        src: url(${fontPressStart});
+        src: url('/fonts/PressStart2P-Regular.ttf');
         font-family: 'Press Start 2P';    
         font-weight: normal;
     }
     @font-face{
-        src: url(${marioKart});
+        src: url('/fonts/Mario-Kart-DS.ttf');
         font-family: 'Mario kart';    
         font-weight: normal;
     }
     @font-face{
-        src: url(${fonyM04b});
+        src: url('./fonts/m04b.TTF');
         font-family: 'm04b';    
         font-weight: normal;
     } 
     @font-face{
-        src: url(${digits});
+        src: url('/fonts/advanced_pixel_lcd-7.ttf');
         font-family: 'digits';    
         font-weight: normal;
     }

@@ -1,5 +1,4 @@
-import styled,{keyframes} from "styled-components"
-import grama from "../../assets/images/grama.svg"
+import styled, { keyframes } from "styled-components"
 
 const pisca = keyframes`
     0%,100%{
@@ -21,7 +20,7 @@ const move1 = keyframes`
         left: 75%;
     }
 `
-export default  styled.header`
+export default styled.header`
     background-color:#649FD8;
     height:100vh;
 
@@ -68,7 +67,6 @@ export default  styled.header`
         left: 6%;
         top:calc(17% - 72px);
         width:24vw;
-        /* height:24vw; */
 
         animation-name:${move1};
         animation-duration:30s;
@@ -125,7 +123,7 @@ export default  styled.header`
         width:100%;
         position:absolute;
         top:calc(100vh - 72px);
-        background-image:url(${grama});
+        background-image:url('/images/grama.svg');
         background-repeat:repeat-x;
         background-position:10px 10px;
     }

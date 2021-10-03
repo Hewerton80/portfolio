@@ -1,7 +1,5 @@
-import styled,{keyframes} from 'styled-components';
-import clouds from "../../assets/images/clouds2.png"
-import solo from "../../assets/images/solo.png"
-import moon from "../../assets/images/moon_pixel.gif"
+import styled, { keyframes } from 'styled-components';
+import { SectionsProps } from '../../types/global';
 
 const move = keyframes`
     0%{
@@ -32,14 +30,14 @@ const pisca2 = keyframes`
     }
 `
 
-export default styled.section`
+export default styled.section<SectionsProps>`
     background: linear-gradient( #FF9D51 0%,#FFB070 100%);
-    display:${props=>props.show?"block":"none"};
+    display:${props => props.show ? "block" : "none"};
 
     #container-experience{
         min-height:calc(100vh - 136px);
         padding:32px 20px;
-        background-image:url(${clouds});
+        background-image:url('/images/clouds2.png');
         background-repeat:no-repeat;
         background-repeat:repeat-y;
         background-size:73vw;
@@ -195,13 +193,15 @@ export default styled.section`
                             padding:8px;
                             font-family:'Press Start 2P';
                             font-size:14px;
-                            
                             color:#DCDBDA;
                             background: linear-gradient(#2A2A2A 50%, #4B4C4A 50%);
                             border: 0;
                             border-radius:4px;
                             @media (max-width: 576px) {
                                 font-size:12px;
+                            }
+                            svg {
+                                margin-left: 10px;
                             }
                         }
                     }
@@ -230,13 +230,16 @@ export default styled.section`
                         animation-duration:1s;
                         animation-timing-function:linear;
                         animation-iteration-count:infinite;
+                        svg {
+                            margin-left: 10px;
+                        }
                     }
                 }
             }
         }
     }
     #moon{
-        background-image:url(${moon});
+        background-image:url('/images/moon_pixel.gif');
         background-repeat:no-repeat;
         background-position: 10% calc(10% - 72px);
         background-size:18vw;
@@ -246,7 +249,7 @@ export default styled.section`
         top:100%; */
         width:100%; 
         height:72px;
-        background-image:url(${solo});
+        background-image:url('/images/solo.png');
         background-repeat:repeat-x;
     }
 `;

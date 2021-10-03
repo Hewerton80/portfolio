@@ -1,7 +1,6 @@
-import styled,{keyframes} from 'styled-components';
-import planets from "../../assets/images/planets.png"
-import stars from "../../assets/images/stars.png"
+import styled, { keyframes } from 'styled-components';
 import colors from "../../assets/colors"
+import { SectionsProps } from '../../types/global';
 
 const move = keyframes`
     0%{
@@ -41,12 +40,11 @@ const upDown = keyframes`
         transform:scale(1.05);
     }
 `
-
-export default styled.section`
+export default styled.section<SectionsProps>`
     background: linear-gradient( ${colors.primary4} 0%,${colors.primary2} 100%);
-    display:${props=>props.show?"block":"none"};
+    display:${props => props.show ? "block" : "none"};
     #stars{
-        background-image:url(${stars});
+        background-image:url('/images/stars.png');
         animation-name:${move};
         animation-duration:440s;
         animation-timing-function:linear;
@@ -55,7 +53,7 @@ export default styled.section`
     #container-aboutMe{
         min-height:100vh;
         padding:32px 20px;
-        background-image:url(${planets});
+        background-image:url('/images/planets.png');
         
         background-repeat:no-repeat;
         background-position-y:20%;
@@ -84,69 +82,6 @@ export default styled.section`
                 max-width: 1140px;
             }
             
-            /* #info{
-                width:100%;
-                display:flex;
-                flex-direction:column;
-                margin-bottom:32px;
-                #avatar{
-                    width:196px;
-                    height:196px;
-                    border:5px solid #F8E667;
-                    overflow:hidden;
-                    margin-bottom:32px;
-                    background:#fff;
-                    img{
-                        width:100%;
-                        animation-name:${pisca1};
-                        animation-duration:5s;
-                        animation-timing-function:linear;
-                    }
-                }
-                #menu{
-                    ul{
-                        div{
-                            display:flex;
-                            flex-direction:row;
-                            align-items:center;
-                            
-
-                            &+div{
-                                    margin-top:16px;
-                            }
-                            span.pointer{
-                                background-color:#fff;
-                            }
-                            li{
-                                
-                                font-family:'Press Start 2P';
-                                font-size:16px;
-                                background: -webkit-linear-gradient(${colors.secunday3} 50%, ${colors.secunday1} 50%);
-                                -webkit-background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                                @media (min-width: 1px) {
-                                    font-size:10px;
-                                } 
-                                @media (min-width: 576px) {
-                                    font-size:12px;
-                                }      
-                                @media (min-width: 768px) {
-                                    font-size:16px;
-                                }
-                            
-                            }
-                        }
-                        img{
-                            width:62px;
-                            margin: 16px 24px 0 0;
-                            transition-duration:.3s;
-                            &:hover{
-                                transform:scale(1.2)
-                            }
-                        }
-                    }
-                }
-            } */
             #profile{
                 display:flex;
                 flex-direction:column;
@@ -203,7 +138,7 @@ export default styled.section`
                 padding:16px;
                 display:flex;
                 margin-bottom:32px;
-                background-color:${colors.primary5+"6B"};   
+                background-color:${colors.primary5 + "6B"};   
                 @media (min-width: 768px) {
                     min-height:252px;
                 }
@@ -252,6 +187,10 @@ export default styled.section`
                         animation-duration:1s;
                         animation-timing-function:linear;
                         animation-iteration-count:infinite;
+                        svg {
+                            margin-left: 10px;
+                            color: black;
+                        }
                     }
                 }
             }

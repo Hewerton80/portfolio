@@ -1,28 +1,18 @@
-import React, { useState, useCallback } from 'react';
-import writer from "./utils/writer"
-import vars from "./utils/vars"
-import Header from "./components/header/styled"
-import AboutMe from "./components/aboutMe/styled"
-import Experience from "./components/experience/styled"
-import Contact from "./components/contact/styled"
+// @next/next/no-img-element
+import { useState, useCallback } from 'react';
+import writer from "../utils/writer"
+import vars from "../utils/vars"
+import Header from "../components/header/styled"
+import AboutMe from "../components/aboutMe/styled"
+import Experience from "../components/experience/styled"
+import Contact from "../components/contact/styled"
 import { FaGreaterThan } from 'react-icons/fa'
 
-import DisplayExperience from "./components/diplayExperience";
-import { Row, Col } from "./components/Grid/styled"
-import GlobalStyle from "./assets/global"
-import linkedin_logo from "./assets/images/linkedin_pixel.png"
-import github_logo from "./assets/images/github_pixel.png"
-import cloud1 from "./assets/images/cloud1.png"
-import cloud2 from "./assets/images/cloud2.png"
-import cloud3 from "./assets/images/cloud3.png"
-import cloud4 from "./assets/images/cloud4.png"
-import sol from "./assets/images/sol.gif"
-import cat from "./assets/images/cat.gif"
-import me from "./assets/images/hewerton.jpg"
-import whatsapp_pixel from "./assets/images/whatsapp_pixel.png"
-import email_pixel from "./assets/images/email_pixel.png"
+import DisplayExperience from "../components/diplayExperience";
+import { Row, Col } from "../components/Grid"
+import GlobalStyle from "../assets/global"
 
-function App() {
+function Index() {
   const [showAboutMe, setShowAboutMe] = useState(false);
   const [showExperience, setShowExperience] = useState(false);
   const [showContacts, setShowContacts] = useState(false);
@@ -83,12 +73,39 @@ function App() {
     <>
       <Header onClick={handleAboutMe}>
         <a id="redirectAboutMe" href="#container-aboutMe">
-          <img className="cloud" id="cloud1" src={cloud1} alt="cloud1" />
-          <img className="cloud" id="cloud2" src={cloud2} alt="cloud2" />
-          <img className="cloud" id="cloud3" src={cloud3} alt="cloud3" />
-          <img className="cloud" id="cloud4" src={cloud4} alt="cloud4" />
-          <img className="cloud" id="cat" src={cat} alt="." />
-          <img id="sol" src={sol} alt="sol" />
+          <img
+            className="cloud"
+            id="cloud1"
+            src='/images/cloud1.png'
+            alt="cloud1"
+          />
+          <img
+            className="cloud"
+            id="cloud2"
+            src='/images/cloud2.png'
+            alt="cloud2"
+          />
+          <img
+            className="cloud"
+            id="cloud3"
+            src='/images/cloud3.png'
+            alt="cloud3"
+          />
+          <img
+            className="cloud"
+            id="cloud4"
+            src='/images/cloud4.png'
+            alt="cloud4"
+          />
+          <img
+            className="cloud"
+            id="cat"
+            src='/images/cat.gif'
+            alt="cat"
+          />
+          <img
+            id="sol" src='/images/sol.gif' alt="sol"
+          />
           <h1>Click to begin</h1>
         </a>
         <footer />
@@ -103,7 +120,7 @@ function App() {
                   <div id="profile">
                     <div id="avatar">
                       <span >
-                        <img src={me} alt="hewerton" />
+                        <img src='/images/hewerton.jpg' alt="hewerton" />
                       </span>
                     </div>
                     <div id="title">
@@ -113,31 +130,6 @@ function App() {
                 </Col>
               </Row>
               <Row>
-                {/* <Col xs={12} lg={6}>
-                <div id="info">
-                  <div id="avatar">
-                    <img src={me} alt="hewerton"/>
-                  </div>
-                
-                  <div id="menu">
-                    <ul>
-                      <div><li>Nome: <span id="nome">{vars.name}</span> </li><span className="pointer" >&nbsp;</span></div>
-                      <div><li>Email: <span id="email">{vars.email}</span></li><span className="pointer" >&nbsp;</span></div>
-                      <div><li>Telefone: <span id="tel">{vars.tel}</span></li><span className="pointer" >&nbsp;</span></div>
-                      <div><li>Endereço: <span id="end">{vars.end}</span></li><span className="pointer" >&nbsp;</span></div>
-                      <li >
-                        <a href="https://github.com/Hewerton80" target="_blank" rel="noopener noreferrer" title="https://github.com/Hewerton80">
-                          <img src={github_logo} alt="https://github.com/Hewerton80"/>
-                        </a>
-                        <a href="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127" target="_blank" rel="noopener noreferrer" title="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127">
-                          <img src={linkedin_logo} alt="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127"/>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </Col> */}
-
                 <Col xs={12} >
                   <div id="display">
                     <p>
@@ -152,7 +144,8 @@ function App() {
                   <div id="next-experience">
                     <a href="#container-experience">
                       <button onClick={handleShowExperience}>
-                        Experiências <FaGreaterThan colors={'#fff'} style={{ marginLeft: 10 }} />
+                        Experiências
+                        <FaGreaterThan/>
                       </button>
                     </a>
                   </div>
@@ -171,7 +164,7 @@ function App() {
             <div id="container-display">
               <Row>
                 {vars.portfolio.map((port, i) =>
-                  <Col xs={12} lg={6}>
+                  <Col key={'port' + i} xs={12} lg={6}>
                     <DisplayExperience
                       key={i}
                       i={i}
@@ -185,7 +178,10 @@ function App() {
                   <div id="next-contacts">
                     <a href="#container-contacts">
                       <button onClick={handleShowContacts}>
-                        Contatos <FaGreaterThan colors={'#fff'} style={{ marginLeft: 10 }} />
+                        Contatos
+                        <FaGreaterThan
+                          color={'#fff'}
+                        />
                       </button>
                     </a>
                   </div>
@@ -209,19 +205,19 @@ function App() {
             <div id="container-logos">
               <div id="logos">
                 <a href="https://github.com/Hewerton80" target="_blank" rel="noopener noreferrer" title="https://github.com/Hewerton80">
-                  <img src={github_logo} alt="https://github.com/Hewerton80" />
+                  <img src='/images/github_pixel.png' alt="https://github.com/Hewerton80" />
                 </a>
                 <a href="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127" target="_blank" rel="noopener noreferrer" title="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127">
-                  <img src={linkedin_logo} alt="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127" />
+                  <img src='/images/linkedin_pixel.png' alt="https://www.linkedin.com/in/hewerton-ad%C3%A3o-5b7952127" />
                 </a>
               </div>
             </div>
             <div id="phone">
-              <img src={whatsapp_pixel} alt="whats" />
+              <img src='/images/whatsapp_pixel.png' alt="whats" />
               <h3>{vars.tel}</h3> <span className="pointer">&nbsp;</span>
             </div>
             <div id="email">
-              <img src={email_pixel} alt="whats" />
+              <img src='/images/email_pixel.png' alt="whats" />
               <h1>{vars.email}</h1> <span className="pointer">&nbsp;</span>
             </div>
           </div>
@@ -233,4 +229,4 @@ function App() {
   );
 }
 
-export default App;
+export default Index;

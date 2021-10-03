@@ -1,29 +1,3 @@
-import screenshot_lop1 from "../assets/images/Screenshot_lop11.png"
-import screenshot_lop2 from "../assets/images/Screenshot_lop22.png"
-import screenshot_lop3 from "../assets/images/Screenshot_lop33.png"
-
-import my_animes1 from "../assets/images/my-animes1.png"
-import my_animes2 from "../assets/images/my-animes2.png"
-import my_animes3 from "../assets/images/my-animes3.png"
-import my_animes4 from "../assets/images/my-animes4.png"
-
-
-import screenshot_urlShort1 from "../assets/images/url-short1.png"
-import screenshot_urlShort2 from "../assets/images/url-short2.png"
-import screenshot_urlShort3 from "../assets/images/url-short3.png"
-
-import screenshot_poke1 from "../assets/images/poke1.png"
-import screenshot_poke2 from "../assets/images/poke2.png"
-import screenshot_poke3 from "../assets/images/poke3.png"
-import screenshot_poke4 from "../assets/images/poke4.png"
-import screenshot_poke5 from "../assets/images/poke5.png"
-
-import screenshot_drive1 from "../assets/images/Screenshot-drive.png"
-import screenshot_drive2 from "../assets/images/Screenshot-drive2.png"
-import screenshot_insta1 from "../assets/images/Screenshot-insta1.png"
-import screenshot_insta2 from "../assets/images/Screenshot-insta2.png"
-import screenshot_insta3 from "../assets/images/Screenshot-insta3.png"
-
 const vars = {
     aboutMe: `
         Graduando do bacharelado em ciência e Tecnologia na UFRN.       
@@ -49,9 +23,9 @@ const vars = {
                 "BootStrap"
             ],
             imgs: [
-                screenshot_lop1,
-                screenshot_lop2,
-                screenshot_lop3
+                '/images/Screenshot_lop11.png',
+                '/images/Screenshot_lop22.png',
+                '/images/Screenshot_lop33.png'
             ],
             link: "https://lop.ect.ufrn.br",
         },
@@ -81,10 +55,10 @@ const vars = {
                 Site similar ao IMD animes, utilizando a kitsu api. Ótimo para acompanhar os novos lançamentos e avaliações da comunidade otaku.
             `,
             imgs: [
-                my_animes1,
-                my_animes2,
-                my_animes3,
-                my_animes4,
+                '/images/my-animes1.png',
+                '/images/my-animes2.png',
+                '/images/my-animes3.png',
+                '/images/my-animes4.png',
             ],
             techs: [
                 "TypeScript",
@@ -99,9 +73,9 @@ const vars = {
                 Sistema web onde seja possível um usuário poder realizar o encurtamento de uma URL.
             `,
             imgs: [
-                screenshot_urlShort1,
-                screenshot_urlShort2,
-                screenshot_urlShort3
+                '/images/url-short1.png',
+                '/images/url-short2.png',
+                '/images/url-short3.png',
             ],
             techs: [
                 "HTML",
@@ -126,11 +100,11 @@ const vars = {
                 "Styled components"
             ],
             imgs: [
-                screenshot_poke1,
-                screenshot_poke2,
-                screenshot_poke3,
-                screenshot_poke4,
-                screenshot_poke5,
+                '/images/poke1.png',
+                '/images/poke2.png',
+                '/images/poke3.png',
+                '/images/poke4.png',
+                '/images/poke5.png',
             ],
             link: "https://upbeat-jones-72d20b.netlify.app/",
         },
@@ -143,8 +117,8 @@ const vars = {
              fazer uploads de arquivos, renomear, mover para lixeira, etc.
             `,
             imgs: [
-                screenshot_drive1,
-                screenshot_drive2
+                '/images/Screenshot-drive.png',
+                '/images/Screenshot-drive2.png',
             ],
             techs: [
                 "HTML",
@@ -165,9 +139,9 @@ const vars = {
             Onde usuário pode se cadastrar, postar fotos, colocar o local, descrição e hastags.
             `,
             imgs: [
-                screenshot_insta1,
-                screenshot_insta2,
-                screenshot_insta3
+                '/images/Screenshot-insta1.png',
+                '/images/Screenshot-insta2.png',
+                '/images/Screenshot-insta3.png',
             ],
             techs: [
                 "HTML",

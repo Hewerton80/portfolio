@@ -1,7 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import sea from "../../assets/images/sea.png"
-import sea2 from "../../assets/images/sea2.png"
-
+import { SectionsProps } from "../../types/global";
 
 const move = keyframes`
     0%{
@@ -54,13 +52,13 @@ const animateImgs = keyframes`
     }
 `
 
-export default styled.section`
+export default styled.section<SectionsProps>`
     
     background: linear-gradient(180deg, rgba(57,104,192,1) 10%, rgba(48,95,183,1) 10%, rgba(48,95,183,1) 20%, rgba(17,64,152,1) 20%, rgba(17,64,152,1) 30%, rgba(0,40,128,1) 30%, rgba(0,40,128,1) 40%, rgba(0,32,119,1) 40%, rgba(0,32,119,1) 50%, rgba(0,24,112,1) 50%, rgba(0,24,112,1) 100%);
     display:${props => props.show ? "block" : "none"};
     
     #bubbles{
-        background-image:url(${sea2});        
+        background-image:url('/images/sea2.png');        
         background-repeat:no-repeat;
         background-position-y:20%;
         animation-name:${moveIverse};
@@ -196,7 +194,7 @@ export default styled.section`
     }
     footer{
         height:153px;
-        background-image:url(${sea});
+        background-image:url('/images/sea.png');
         background-repeat:no-repeat;
         background-position-y:bottom;
         background-size:100vw;

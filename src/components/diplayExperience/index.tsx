@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
-import { Row, Col } from "../Grid/styled"
+import { Row, Col } from "../Grid"
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { MobileStepper, Stepp } from "../mobileStepper/styled";
@@ -13,8 +14,6 @@ const DiplayExperience = props => {
         setIndex(i)
     }
     return (
-
-
         <div key={i + "port"} className="display-xp">
             <Row>
                 <Col xs={12}>
@@ -44,7 +43,7 @@ const DiplayExperience = props => {
                                     key={j + "imgs"}
                                     src={image}
                                     alt={'image-' + j + 1}
-                                    width={`${port.widthImages ? port.widthImages + 'px' : '100%'} `} 
+                                    width={`${port.widthImages ? port.widthImages + 'px' : '100%'} `}
                                 />
                             )}
                         </AutoPlaySwipeableViews>
@@ -67,7 +66,11 @@ const DiplayExperience = props => {
                     <div className="visit">
                         <a href={port.link} target="_blank" rel="noopener noreferrer">
                             <button >
-                                Visitar <FaGreaterThan colors={'#fff'} style={{ marginLeft: 10 }} />
+                                Visitar
+                                <FaGreaterThan
+                                    color={'#fff'}
+                                // style={{ marginLeft: 10 }}
+                                />
                             </button>
                         </a>
                     </div>
