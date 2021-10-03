@@ -1,16 +1,16 @@
-const writer = (query, interval, content) => {
+import { MutableRefObject } from "react";
 
-    const element = document.querySelector(query)
+export const writer = (ref: MutableRefObject<HTMLHeadingElement | HTMLSpanElement>, interval: number, text: string) => {
+
     //console.log("elemento: ",element)
-    const textArray = String(content).split("");
+    const textArray = String(text).split("");
     //console.log("textArray: ",textArray)
-    if (element) {
-        element.innerHTML = ""
-        textArray.forEach((c, i) => {
+    if (ref?.current) {
+        ref.current.innerHTML = ""
+        textArray.forEach((character, i) => {
             setTimeout(() => {
-                element.innerHTML += c;
+                ref.current.innerHTML += character;
             }, i * Number(interval))
         })
     }
 }
-export default writer;

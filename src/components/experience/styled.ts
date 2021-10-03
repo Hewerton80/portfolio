@@ -214,25 +214,23 @@ export default styled.section<SectionsProps>`
                 width:100%;
                 display:flex;
                 justify-content:flex-end;
-                a{
-                    button{
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        padding:8px;
-                        font-family:'Press Start 2P';
-                        font-size:18px;
-                        color:#fff;
-                        background: linear-gradient(#050938 50%, #303887 50%);
-                        border: 0;
-                        border-radius:4px;
-                        animation-name:${upDown};
-                        animation-duration:1s;
-                        animation-timing-function:linear;
-                        animation-iteration-count:infinite;
-                        svg {
-                            margin-left: 10px;
-                        }
+                button{
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    padding:8px;
+                    font-family:'Press Start 2P';
+                    font-size:18px;
+                    color:#fff;
+                    background: linear-gradient(#050938 50%, #303887 50%);
+                    border: 0;
+                    border-radius:4px;
+                    animation-name:${upDown};
+                    animation-duration:1s;
+                    animation-timing-function:linear;
+                    animation-iteration-count:infinite;
+                    svg {
+                        margin-left: 10px;
                     }
                 }
             }

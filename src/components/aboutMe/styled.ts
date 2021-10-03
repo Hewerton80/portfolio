@@ -172,27 +172,27 @@ export default styled.section<SectionsProps>`
                 width:100%;
                 display:flex;
                 justify-content:flex-end;
-                a{
-                    button{
-                        display:flex;
-                        align-items:center;
-                        justify-content:center;
-                        padding:8px;
-                        font-family:'Press Start 2P';
-                        font-size:18px;
-                        background: linear-gradient(#f0f80a 50%, #c8a104 50%);
-                        border: 0;
-                        border-radius:4px;
-                        animation-name:${upDown};
-                        animation-duration:1s;
-                        animation-timing-function:linear;
-                        animation-iteration-count:infinite;
-                        svg {
-                            margin-left: 10px;
-                            color: black;
-                        }
+              
+                button{
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    padding:8px;
+                    font-family:'Press Start 2P';
+                    font-size:18px;
+                    background: linear-gradient(#f0f80a 50%, #c8a104 50%);
+                    border: 0;
+                    border-radius:4px;
+                    animation-name:${upDown};
+                    animation-duration:1s;
+                    animation-timing-function:linear;
+                    animation-iteration-count:infinite;
+                    svg {
+                        margin-left: 10px;
+                        color: black;
                     }
                 }
+                
             }
         }
         span.pointer{

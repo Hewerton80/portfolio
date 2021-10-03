@@ -24,11 +24,12 @@ export default styled.header`
     background-color:#649FD8;
     height:100vh;
 
-    a{
-        height:100%;
-        display:flex;
-        justify-content:center;
-        overflow:hidden;
+    #redirectAboutMe {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        cursor: pointer;
     }
     h1{
         font-family:'Press Start 2P';
