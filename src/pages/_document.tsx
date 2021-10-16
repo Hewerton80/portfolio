@@ -22,7 +22,7 @@ class MyDocument extends Document {
                     <meta property="og:title" content="Hewerton Adão" />
                     <meta property="og:locale" content="pt_BR" />
                     <meta property="og:image" content="https://avatars.githubusercontent.com/u/37268237?v=4" />
-                    <meta property="og:url" content="https://vercel.com/hewerton-portfolio" />
+                    <meta property="og:url" content="https://portfolio-71qtwpr6w-hewerton-portfolio.vercel.app/" />
                     <meta property="og:site_name" content="Hewerton Adão" />
                 </Head>
                 <body>
