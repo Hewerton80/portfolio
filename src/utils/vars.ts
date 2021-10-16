@@ -7,7 +7,7 @@ const vars = {
     `,
     name: "Hewerton Adão da Paz",
     email: "hewerton80@gmail.com",
-    tel: "(84) 988091975",
+    tel: "(84) 9880-91975",
     end: "Natal, RN",
     portfolio: [
         {

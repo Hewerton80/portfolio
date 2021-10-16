@@ -199,5 +199,8 @@ function Index() {
     </>
   );
 }
+export function getServerSideProps() {
+  return { props: {} }
+}
 
 export default Index;
